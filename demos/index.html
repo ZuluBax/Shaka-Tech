@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Explore interactive demo websites built by Shaka Tech for tradespeople — roofers, builders, electricians and more — each powered by a live AI assistant.">
+    <meta property="og:title" content="AI Demos | Shaka Tech">
+    <meta property="og:description" content="Choose your industry and take a Shaka Tech AI-powered website for a test drive.">
+    <meta property="og:type" content="website">
+    <title>AI Demos | Shaka Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/assets/css/demos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/images/logo.png" alt="Shaka Tech Logo" class="logo-image">
+                <div class="logo-text-container">
+                    <span class="logo-text">SHAKA TECH</span>
+                    <span class="tagline">TECHNOLOGY. SUPPORT. GROWTH.</span>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#shaka-ai">Shaka AI</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="demos-hero">
+            <span class="eyebrow">Demo Showroom</span>
+            <h1>What could your website do?</h1>
+            <p>Choose your industry and take the website for a test drive. Every demo includes a live AI assistant that can answer questions, capture leads and book a callback — just like it would on your own site.</p>
+        </section>
+
+        <section id="showroom">
+            <div class="trade-grid" id="trade-grid"></div>
+        </section>
+
+        <section id="final-cta">
+            <h2>Imagine this working for your business.</h2>
+            <p class="lede">This is only a demonstration. We can build a fully customised version for your business, including your branding, services, AI assistant and booking system.</p>
+            <div class="cta-row">
+                <a href="/#contact" class="cta-button">Build My Website</a>
+                <a href="/#contact" class="btn-secondary">Book a Free Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">SHAKA TECH</span>
+                <span class="tagline">TECHNOLOGY. SUPPORT. GROWTH.</span>
+            </div>
+            <p>&copy; 2026 Shaka Tech. All rights reserved. | West Yorkshire, UK</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/trade-cards.js"></script>
+    <script src="/script.js"></script>
+    <script>renderTradeCards('#trade-grid');</script>
+</body>
+</html>

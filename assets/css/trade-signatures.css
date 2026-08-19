@@ -1,0 +1,260 @@
+/* =====================================================================
+   Trade signature styles — one bold, subject-specific device per trade,
+   layered on top of the shared demos.css skeleton. Each block is scoped
+   to a body modifier class (e.g. .t-roofer) so pages opt in individually.
+   ===================================================================== */
+
+/* ---------- ROOFER — pitched roofline cut ---------- */
+.t-roofer .roofline-divider {
+    display: block;
+    width: 100%;
+    height: 34px;
+}
+
+.t-roofer .roofline-divider path {
+    fill: none;
+    stroke: var(--t-accent);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+    opacity: 0.8;
+}
+
+.t-roofer .trade-hero-visual {
+    clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+    border-radius: 0;
+}
+
+.t-roofer .service-card {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+}
+
+.t-roofer .trade-hero .trade-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: 0.5rem;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid var(--t-accent);
+    vertical-align: middle;
+}
+
+/* ---------- BUILDER — blueprint grid + dimension ticks ---------- */
+.t-builder .trade-hero {
+    background-image:
+        linear-gradient(135deg, var(--t-bg-alt) 0%, var(--t-bg) 100%),
+        linear-gradient(var(--t-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--t-border) 1px, transparent 1px);
+    background-size: 100% 100%, 28px 28px, 28px 28px;
+}
+
+.t-builder .trade-hero-visual {
+    position: relative;
+    border-style: dashed;
+}
+
+.t-builder .trade-hero-visual::before,
+.t-builder .trade-hero-visual::after {
+    content: '';
+    position: absolute;
+    border: 1px solid var(--t-accent);
+    opacity: 0.6;
+}
+
+.t-builder .trade-hero-visual::before {
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    border-bottom: none;
+}
+
+.t-builder .trade-hero-visual::after {
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    width: 6px;
+    border-right: none;
+}
+
+.t-builder .trade-hero-visual .dim-label {
+    position: absolute;
+    top: -26px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--t-heading-font);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--t-accent);
+}
+
+.t-builder .service-card {
+    border-style: dashed;
+}
+
+/* ---------- ELECTRICIAN — circuit trace ---------- */
+.t-electrician .circuit-trace {
+    width: 100%;
+    height: 48px;
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.t-electrician .circuit-trace path {
+    fill: none;
+    stroke: var(--t-accent);
+    stroke-width: 2;
+    opacity: 0.7;
+}
+
+.t-electrician .circuit-trace circle {
+    fill: var(--t-accent);
+}
+
+.t-electrician .service-card {
+    border-left: 3px solid var(--t-accent);
+}
+
+.t-electrician .trade-hero-visual .trade-badge-icon {
+    filter: drop-shadow(0 0 12px var(--t-accent));
+}
+
+/* ---------- PLUMBER — flowing pipe divider ---------- */
+.t-plumber .pipe-divider {
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+.t-plumber .pipe-divider path {
+    fill: none;
+    stroke: var(--t-accent);
+    stroke-width: 3;
+    opacity: 0.5;
+}
+
+.t-plumber .pipe-divider circle {
+    fill: var(--t-bg-alt);
+    stroke: var(--t-accent);
+    stroke-width: 2;
+}
+
+.t-plumber .service-card,
+.t-plumber .trade-hero-visual {
+    border-radius: calc(var(--t-radius) * 1.4) calc(var(--t-radius) * 0.4) calc(var(--t-radius) * 1.4) calc(var(--t-radius) * 0.4);
+}
+
+/* ---------- JOINER — dovetail joint seam ---------- */
+.t-joiner .joint-divider {
+    height: 22px;
+    width: 100%;
+    background-image:
+        linear-gradient(135deg, var(--t-bg-alt) 25%, transparent 25%),
+        linear-gradient(225deg, var(--t-bg-alt) 25%, transparent 25%);
+    background-position: 0 0;
+    background-size: 26px 22px;
+    background-color: var(--t-bg);
+}
+
+.t-joiner .service-card {
+    background-image: repeating-linear-gradient(
+        180deg,
+        var(--t-border-soft) 0px,
+        transparent 1px,
+        transparent 5px
+    );
+    background-color: var(--t-bg);
+}
+
+.t-joiner .trade-hero-visual .trade-badge-icon {
+    transform: rotate(-8deg);
+}
+
+/* ---------- LANDSCAPER — organic wave + soft form ---------- */
+.t-landscaper .wave-divider {
+    display: block;
+    width: 100%;
+    height: 44px;
+}
+
+.t-landscaper .wave-divider path {
+    fill: none;
+    stroke: var(--t-accent);
+    stroke-width: 2.5;
+    opacity: 0.55;
+}
+
+.t-landscaper .trade-hero-visual {
+    border-radius: 62% 38% 55% 45% / 48% 45% 55% 52%;
+}
+
+.t-landscaper .service-card:hover {
+    border-radius: 34% 66% 62% 38% / 42% 38% 62% 58%;
+}
+
+/* ---------- PLASTERER — quiet restraint, one swipe ---------- */
+.t-plasterer .trade-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.t-plasterer .trade-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent 0%, var(--t-border) 45%, transparent 70%);
+    pointer-events: none;
+}
+
+.t-plasterer .service-card,
+.t-plasterer .trade-hero-visual,
+.t-plasterer .review-card,
+.t-plasterer .faq-item,
+.t-plasterer .gallery-tile {
+    border: none;
+    box-shadow: 0 1px 0 var(--t-border) inset;
+}
+
+.t-plasterer .trade-cta--outline {
+    border-width: 1px;
+}
+
+/* ---------- DOG WALKER — paw trail ---------- */
+.t-dog-walker .paw-trail {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+    padding: 1.8rem 1rem;
+    font-size: 2.2rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+    .t-dog-walker .paw-trail {
+        gap: 1rem 1.4rem;
+        font-size: 1.6rem;
+    }
+}
+
+.t-dog-walker .paw-trail span:nth-child(odd) {
+    transform: translateY(-6px) rotate(-8deg);
+}
+
+.t-dog-walker .paw-trail span:nth-child(even) {
+    transform: translateY(4px) rotate(8deg);
+}
+
+.t-dog-walker .trade-hero-visual {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

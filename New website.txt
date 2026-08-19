@@ -1,0 +1,795 @@
+# Shaka Tech Website Redesign & AI Demo Showcase
+
+You are redesigning the existing **Shaka Tech** website.
+
+Before making any changes, inspect the existing project thoroughly and understand the current:
+- Logo
+- Brand colours
+- Typography/fonts
+- Layout
+- Components
+- Animations
+- Responsive behaviour
+- Existing pages
+- Existing assets
+- Existing content
+- Technical architecture
+
+## IMPORTANT BRAND RULE
+
+**Do NOT redesign the Shaka Tech brand from scratch.**
+
+Keep the existing:
+- Shaka Tech logo
+- Existing colour scheme
+- Existing font/typography
+- Existing brand identity
+
+The redesign should feel like a **premium evolution of the existing Shaka Tech website**, not a completely different company.
+
+If the existing logo, colours or fonts are already implemented in the project, reuse them rather than replacing them.
+
+Do not introduce random new colours that conflict with the existing Shaka Tech branding.
+
+---
+
+# MAIN OBJECTIVE
+
+Transform Shaka Tech from a traditional web-development company website into a modern **AI-powered digital solutions company** focused initially on helping small businesses and tradespeople.
+
+The main selling point should become:
+
+> **We don't just build websites. We build websites that work for your business.**
+
+Shaka Tech should demonstrate that an AI-powered website can:
+
+- Answer customer questions 24/7
+- Capture customer enquiries
+- Collect customer information
+- Qualify leads
+- Arrange callbacks
+- Book appointments
+- Connect to the business owner's calendar
+- Send confirmation messages
+- Follow up with potential customers
+- Help convert website visitors into customers
+
+The website should therefore feel like a **demonstration of the technology**, not simply a portfolio website.
+
+---
+
+# CORE HOMEPAGE MESSAGE
+
+The homepage needs a strong hero section.
+
+Primary message:
+
+## Your website should do more than look good.
+
+Supporting message:
+
+> Shaka Tech builds modern websites powered by AI that help businesses capture enquiries, answer customers, book appointments and turn website visitors into real opportunities.
+
+Primary CTA:
+
+### Explore the AI Demos
+
+Secondary CTA:
+
+### Build My Website
+
+The primary CTA should take visitors to:
+
+`/demos`
+
+---
+
+# HOMEPAGE STRUCTURE
+
+Create a polished conversion-focused homepage with the following sections.
+
+## 1. HERO
+
+Large, premium hero section.
+
+Include:
+- Existing Shaka Tech branding
+- Strong headline
+- Supporting copy
+- Primary CTA
+- Secondary CTA
+- Subtle animation
+- Visual demonstration of an AI assistant interacting with a website
+
+The hero should immediately communicate:
+
+**Website + AI + Automation + Lead Generation**
+
+Avoid generic stock imagery.
+
+---
+
+# 2. THE PROBLEM
+
+Headline:
+
+## Your website shouldn't just sit there.
+
+Explain that many small-business websites simply provide information.
+
+They don't:
+- Answer enquiries out of hours
+- Capture leads effectively
+- Follow up with potential customers
+- Book appointments
+- Help businesses respond quickly
+
+Then introduce Shaka Tech:
+
+> We build websites that actively help your business.
+
+---
+
+# 3. SHAKA AI
+
+Create a major feature section introducing the AI system.
+
+Possible headline:
+
+## Meet Shaka AI.
+
+Supporting message:
+
+> Your website's AI receptionist.
+
+Show an interactive chatbot UI.
+
+The visitor should be able to interact with a **safe demo chatbot**.
+
+The chatbot should demonstrate:
+
+1. Customer asks a question
+2. AI answers
+3. AI asks for customer details
+4. AI identifies what the customer needs
+5. AI offers a callback
+6. Customer chooses a time
+7. Demo calendar updates
+8. Demo SMS confirmation appears
+
+This should feel like an actual product demonstration.
+
+---
+
+# 4. HOW IT WORKS
+
+Create a visual four/five-step process:
+
+### 01 — Visitor arrives
+
+A potential customer visits the website.
+
+### 02 — AI starts the conversation
+
+The AI answers questions immediately.
+
+### 03 — Lead is captured
+
+Customer details and requirements are collected.
+
+### 04 — Appointment is booked
+
+The AI can arrange a callback or appointment.
+
+### 05 — Business gets the lead
+
+The business owner receives the customer information and appointment.
+
+Use attractive animations when scrolling through these stages.
+
+---
+
+# 5. INTERACTIVE TRADE DEMOS
+
+This should be one of the most important sections on the website.
+
+Headline:
+
+## See what your business could look like.
+
+Supporting text:
+
+> Choose your trade and explore an interactive example website powered by Shaka AI.
+
+Create large visual cards for:
+
+### Roofer
+### Builder
+### Electrician
+### Plumber
+### Joiner
+### Landscaper
+### Plasterer
+
+Each card should have:
+- Trade-specific icon/image
+- Short description
+- "Explore Demo →" CTA
+- Hover animation
+- Consistent Shaka Tech branding
+
+Clicking a card takes the user to:
+
+`/demos/roofer`
+
+`/demos/builder`
+
+`/demos/electrician`
+
+`/demos/plumber`
+
+`/demos/joiner`
+
+`/demos/landscaper`
+
+`/demos/plasterer`
+
+---
+
+# 6. DEMO SHOWROOM
+
+Create a dedicated `/demos` page.
+
+Headline:
+
+## What could your website do?
+
+Subheading:
+
+> Choose your industry and take the website for a test drive.
+
+Display the seven trade categories.
+
+The page should feel like entering a **digital showroom**.
+
+Do NOT make it feel like a basic template selection page.
+
+---
+
+# 7. INDIVIDUAL TRADE DEMO WEBSITES
+
+Each demo should feel like a genuine business website that could be launched for a real customer.
+
+Initially create:
+
+## Roofer Demo
+
+Example fictional business:
+
+**Apex Roofing**
+
+Example positioning:
+
+> Professional roofing services across West Yorkshire.
+
+Include realistic demo sections:
+
+- Hero
+- Services
+- About
+- Gallery
+- Areas covered
+- Reviews
+- FAQs
+- Contact
+- AI assistant
+- Quote request
+- Callback booking
+
+Clearly identify fictional/demo content where appropriate.
+
+Do not present fake reviews as genuine customer reviews.
+
+---
+
+# TRADE-SPECIFIC CONTENT
+
+Each demo should have its own services and AI knowledge.
+
+## Roofer
+
+- Roof repairs
+- New roofs
+- Flat roofing
+- Guttering
+- Fascias & soffits
+- Emergency repairs
+
+## Builder
+
+- Extensions
+- Renovations
+- New builds
+- Structural work
+- Brickwork
+- Property improvements
+
+## Electrician
+
+- Rewiring
+- Consumer units
+- Lighting
+- Sockets
+- EV chargers
+- Electrical inspections
+
+## Plumber
+
+- Emergency plumbing
+- Leaks
+- Burst pipes
+- Bathrooms
+- Radiators
+- General plumbing
+
+## Joiner
+
+- Bespoke furniture
+- Doors
+- Flooring
+- Staircases
+- Fitted storage
+- General joinery
+
+## Landscaper
+
+- Garden design
+- Patios
+- Driveways
+- Fencing
+- Turfing
+- Garden maintenance
+
+## Plasterer
+
+- Internal plastering
+- Skimming
+- Rendering
+- Dry lining
+- Repairs
+- Ceiling work
+
+---
+
+# AI CHATBOT DEMONSTRATION
+
+Every trade demo should contain a floating AI assistant.
+
+For example:
+
+> 👋 Hi! I'm the AI assistant for Apex Roofing. How can I help?
+
+Suggested options:
+
+- Get a quote
+- Book a callback
+- Ask a question
+- Emergency repair
+
+The chatbot should demonstrate a realistic conversation.
+
+Example flow:
+
+Customer:
+
+> I have a leak coming through my ceiling.
+
+AI:
+
+> I can help with that. I'll take a few details and arrange a callback.
+
+Collect:
+
+- Name
+- Phone number
+- Email
+- Postcode
+- Description of the problem
+- Preferred callback time
+
+Then show:
+
+### Callback successfully requested
+
+Follow this with a simulated:
+
+**Calendar confirmation**
+
+and:
+
+**SMS confirmation**
+
+IMPORTANT:
+
+This is a DEMO.
+
+Do not send real SMS messages.
+
+Do not create real calendar appointments.
+
+Instead create a realistic simulated experience showing what the real Shaka AI system could do.
+
+Clearly label simulated/demo functionality where necessary.
+
+---
+
+# PERSONALISATION DEMO
+
+Add a feature allowing visitors to customise the demo.
+
+For example:
+
+### Make this demo yours
+
+Fields:
+
+**Business Name**
+
+**Town/City**
+
+**Main Service**
+
+Then allow the user to click:
+
+### Preview My Website
+
+The demo should dynamically update the business name, location and primary service.
+
+Example:
+
+Before:
+
+> Apex Roofing  
+> Roofing Services across West Yorkshire
+
+After:
+
+> Smith Roofing  
+> Roofing Services in Huddersfield
+
+This should demonstrate how Shaka Tech could create a personalised website for a real business.
+
+---
+
+# LEAD GENERATION CTA
+
+After the user interacts with the demo, show:
+
+## Imagine this working for your business.
+
+Supporting text:
+
+> This is only a demonstration. We can build a fully customised version for your business, including your branding, services, AI assistant and booking system.
+
+CTA:
+
+### Build My Website
+
+Secondary:
+
+### Book a Free Consultation
+
+Both should lead to the Shaka Tech enquiry/contact flow.
+
+---
+
+# SERVICES SECTION
+
+Create a clear Shaka Tech services section.
+
+Possible services:
+
+### AI-Powered Websites
+
+Modern responsive websites designed around your business.
+
+### AI Receptionists
+
+Answer customer questions and capture enquiries 24/7.
+
+### Lead Capture
+
+Turn website visitors into qualified enquiries.
+
+### Appointment Booking
+
+Allow customers to book callbacks and appointments.
+
+### Automation
+
+Connect website enquiries with calendars, notifications and follow-up systems.
+
+### Website Care
+
+Ongoing maintenance, updates and optimisation.
+
+---
+
+# WHY SHAKA TECH
+
+Create a section explaining why customers should choose Shaka Tech.
+
+Focus on:
+
+- AI-first approach
+- Designed for small businesses
+- Built around generating enquiries
+- Modern responsive websites
+- Automation
+- Personal service
+- Affordable compared with traditional agencies
+- Ongoing support
+
+Avoid generic agency buzzwords.
+
+Make the copy clear and understandable to a local business owner who isn't technical.
+
+---
+
+# FINAL CTA
+
+End the homepage with a strong CTA.
+
+## Ready to make your website work harder?
+
+> Let's build a website that doesn't just represent your business — it helps grow it.
+
+Buttons:
+
+### Explore the Demos
+
+### Start Your Project
+
+---
+
+# DESIGN DIRECTION
+
+The website should feel:
+
+- Premium
+- Modern
+- Technological
+- Trustworthy
+- Professional
+- Clean
+- Fast
+- Confident
+
+But avoid making it look like a generic futuristic AI startup.
+
+Shaka Tech is selling to **real small-business owners and tradespeople**.
+
+The website therefore needs to balance:
+
+**Technology + Trust + Simplicity**
+
+A roofer, plumber or electrician should immediately understand what Shaka Tech does.
+
+---
+
+# ANIMATION
+
+Use animations carefully.
+
+Include:
+- Smooth scroll
+- Subtle card hover effects
+- AI chat typing animation
+- Message appearance animations
+- Calendar booking animation
+- Lead capture animation
+- Scroll-triggered section reveals
+
+Avoid excessive animations that reduce performance.
+
+The website should feel polished rather than gimmicky.
+
+---
+
+# RESPONSIVE DESIGN
+
+The entire site must work exceptionally well on:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+The demo websites must also be fully responsive.
+
+Mobile experience is particularly important because many local-business customers will visit these websites from phones.
+
+---
+
+# SEO
+
+Build the site with SEO in mind.
+
+Use:
+- Proper semantic HTML
+- Correct heading hierarchy
+- Metadata
+- Open Graph metadata
+- Descriptive page titles
+- Descriptive meta descriptions
+- Local-business-friendly content
+- Fast loading
+- Image optimisation
+- Structured data where appropriate
+
+Create SEO-friendly routes:
+
+`/demos`
+
+`/demos/roofer`
+
+`/demos/builder`
+
+`/demos/electrician`
+
+`/demos/plumber`
+
+`/demos/joiner`
+
+`/demos/landscaper`
+
+`/demos/plasterer`
+
+---
+
+# TECHNICAL REQUIREMENTS
+
+Before changing anything:
+
+1. Inspect the entire existing project.
+2. Identify the existing framework.
+3. Identify the existing styling system.
+4. Identify existing reusable components.
+5. Identify the existing logo/assets.
+6. Identify the existing fonts.
+7. Identify the existing colour variables.
+8. Preserve useful existing components.
+9. Do not unnecessarily replace the entire application.
+
+Build reusable components for:
+
+- Header
+- Footer
+- CTA
+- Trade cards
+- Demo cards
+- AI chatbot
+- Chat messages
+- Lead form
+- Calendar simulation
+- SMS simulation
+- Service cards
+- Testimonials/reviews
+- FAQ
+- Section headings
+
+The trade demos should use reusable components with trade-specific configuration rather than duplicating entire codebases.
+
+---
+
+# DEMO ARCHITECTURE
+
+Create a configuration-driven structure where possible.
+
+For example:
+
+```text
+trades/
+  roofer
+  builder
+  electrician
+  plumber
+  joiner
+  landscaper
+  plasterer
+```
+
+Each trade should contain configuration for:
+
+- Business name
+- Industry
+- Services
+- Areas
+- AI personality
+- AI knowledge
+- Example questions
+- CTA text
+- Demo images
+- Colours/accent settings if appropriate
+
+This will make it easy to add more industries later.
+
+---
+
+# FUTURE EXPANSION
+
+Design the architecture so we can eventually add:
+
+- Painter & Decorator
+- Bricklayer
+- Tiler
+- Kitchen Fitter
+- Bathroom Fitter
+- Flooring Installer
+- Fencing Contractor
+- Window Installer
+- Heating Engineer
+- Cleaning Company
+- Removal Company
+- Accountant
+- Estate Agent
+- Driving School
+- Beauty Salon
+- Barber
+- Restaurant
+
+Do not build all of these now.
+
+Build the system so they can be added easily later.
+
+---
+
+# IMPORTANT BUSINESS OBJECTIVE
+
+The website must ultimately convert visitors into Shaka Tech leads.
+
+Every major section should naturally lead toward:
+
+**Explore Demo → Experience AI → Imagine Your Business → Contact Shaka Tech**
+
+Do not turn the website into a technical showcase where visitors become confused about what they're supposed to do.
+
+The primary audience is:
+
+**Small business owners who want more customers and don't necessarily understand AI.**
+
+Speak in terms of:
+- More enquiries
+- Faster responses
+- More bookings
+- Less admin
+- 24/7 availability
+- Professional online presence
+- Saving time
+- Growing the business
+
+Rather than technical terminology.
+
+---
+
+# FINAL INSTRUCTION
+
+Do not start coding immediately.
+
+First:
+
+1. Inspect the existing Shaka Tech website/project.
+2. Understand the existing branding.
+3. Create a concise implementation plan.
+4. Identify which existing components can be reused.
+5. Identify what needs to be redesigned.
+6. Identify any technical risks.
+7. Then implement the redesign.
+
+Do not remove existing functionality unless it is genuinely being replaced.
+
+The finished result should look like a **professional UK technology company specialising in AI-powered websites and business automation**, while clearly retaining the existing Shaka Tech identity.
+
+Most importantly:
+
+**The website itself should demonstrate the product we are selling.**

@@ -1,0 +1,567 @@
+/* ===== /demos showroom + trade demo site styles ===== */
+
+.demos-hero {
+    text-align: center;
+    padding: 6rem 2rem 3rem;
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+}
+
+.demos-hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+}
+
+.demos-hero p {
+    color: var(--muted);
+    font-size: 1.15rem;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+#showroom {
+    background: var(--dark-bg);
+    padding-top: 3rem;
+}
+
+/* ===== Trade demo site (e.g. Apex Roofing) ===== */
+.trade-site {
+    --t-accent: #FF7A1A;
+    --t-accent-2: #FFB177;
+    --t-bg: #14100D;
+    --t-bg-alt: #1B1613;
+    --t-text: #EDE7E2;
+    --t-muted: rgba(237, 231, 226, 0.65);
+    --t-heading-font: 'Orbitron', sans-serif;
+    --t-radius: 16px;
+    --t-border: color-mix(in srgb, var(--t-accent) 22%, transparent);
+    --t-border-soft: color-mix(in srgb, var(--t-accent) 18%, transparent);
+    --t-glow: color-mix(in srgb, var(--t-accent) 16%, transparent);
+    background: var(--t-bg);
+    color: var(--t-text);
+    font-family: 'Raleway', sans-serif;
+}
+
+.trade-site header {
+    background: var(--t-bg-alt);
+    border-bottom: 1px solid var(--t-border);
+    box-shadow: none;
+}
+
+.trade-site .logo-text {
+    color: var(--t-text);
+    font-family: var(--t-heading-font);
+}
+
+.trade-site .tagline {
+    color: var(--t-accent);
+}
+
+.trade-site .nav-links a {
+    color: var(--t-text);
+}
+
+.trade-site .nav-links a:hover {
+    color: var(--t-accent);
+    text-shadow: none;
+}
+
+.trade-site .nav-links a::after {
+    background: var(--t-accent);
+}
+
+.trade-site .nav-toggle span {
+    background: var(--t-text);
+}
+
+.trade-hero {
+    text-align: left;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--t-bg-alt) 0%, var(--t-bg) 100%);
+    position: relative;
+}
+
+.trade-hero .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.trade-hero .trade-eyebrow {
+    color: var(--t-accent);
+    font-family: var(--t-heading-font);
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.trade-hero h1 {
+    font-family: var(--t-heading-font);
+    font-size: 2.9rem;
+    color: var(--t-text);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.trade-hero .hero-lede {
+    color: var(--t-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 520px;
+}
+
+.trade-cta {
+    display: inline-block;
+    padding: 1.1rem 2.6rem;
+    background: linear-gradient(135deg, var(--t-accent), var(--t-accent-2));
+    color: #1B1613;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.trade-cta:hover {
+    transform: translateY(-3px);
+}
+
+.trade-cta--outline {
+    background: transparent;
+    color: var(--t-accent);
+    border: 1px solid var(--t-accent);
+}
+
+.trade-hero-visual {
+    background: var(--t-bg-alt);
+    border: 1px solid var(--t-border);
+    border-radius: var(--t-radius);
+    padding: 2rem;
+    text-align: center;
+}
+
+.trade-hero-visual .trade-badge-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.trade-hero-visual strong {
+    display: block;
+    font-family: var(--t-heading-font);
+    color: var(--t-text);
+    margin-bottom: 0.4rem;
+}
+
+.trade-hero-visual span {
+    color: var(--t-muted);
+    font-size: 0.9rem;
+}
+
+.trade-site section {
+    padding: 5rem 2rem;
+}
+
+.trade-site h2 {
+    font-family: var(--t-heading-font);
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--t-text);
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+}
+
+.trade-site .section-head p {
+    color: var(--t-muted);
+}
+
+.trade-site #services {
+    background: var(--t-bg-alt);
+}
+
+.trade-site .service-card {
+    background: var(--t-bg);
+    border: 1px solid var(--t-border-soft);
+    border-radius: var(--t-radius);
+}
+
+.trade-site .service-card:hover {
+    border-color: var(--t-accent);
+    box-shadow: 0 8px 30px var(--t-glow);
+}
+
+.trade-site .service-card h3 {
+    color: var(--t-accent);
+}
+
+.trade-site .service-card p {
+    color: var(--t-muted);
+}
+
+.trade-about {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.trade-about p {
+    color: var(--t-muted);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 1.3rem;
+}
+
+.trade-gallery {
+    background: var(--t-bg-alt);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-tile {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--t-radius);
+    background: linear-gradient(135deg, var(--t-border-soft), var(--t-bg-alt));
+    border: 1px solid var(--t-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    color: var(--t-muted);
+    text-align: center;
+    padding: 1rem;
+}
+
+.gallery-tile .icon {
+    font-size: 2.2rem;
+}
+
+.gallery-tile .caption {
+    font-size: 0.85rem;
+    color: var(--t-text);
+    font-weight: 600;
+}
+
+.gallery-note,
+.reviews-note {
+    text-align: center;
+    color: var(--t-muted);
+    font-size: 0.85rem;
+    max-width: 620px;
+    margin: -1.5rem auto 3rem;
+}
+
+.areas-section {
+    text-align: center;
+}
+
+.areas-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.area-chip {
+    background: var(--t-bg-alt);
+    border: 1px solid var(--t-border);
+    color: var(--t-text);
+    padding: 0.6rem 1.3rem;
+    border-radius: 20px;
+    font-size: 0.92rem;
+}
+
+.trade-reviews {
+    background: var(--t-bg-alt);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    position: relative;
+    background: var(--t-bg);
+    border: 1px solid var(--t-border-soft);
+    border-radius: var(--t-radius);
+    padding: 1.6rem;
+}
+
+.review-card .stars {
+    color: var(--t-accent);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.review-card p {
+    color: var(--t-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.review-card .author {
+    color: var(--t-text);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.review-card .demo-tag-corner {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: rgba(255, 193, 7, 0.15);
+    color: #FFC107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    padding: 0.15rem 0.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.trade-faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--t-bg-alt);
+    border: 1px solid var(--t-border-soft);
+    border-radius: var(--t-radius);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--t-text);
+    font-family: var(--t-heading-font);
+    font-size: 0.92rem;
+    letter-spacing: 0.3px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    color: var(--t-accent);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.faq-item[open] summary::after {
+    content: '\2212';
+}
+
+.faq-item p {
+    color: var(--t-muted);
+    margin-top: 0.9rem;
+    line-height: 1.7;
+    font-size: 0.92rem;
+}
+
+/* ===== Personalisation panel ===== */
+.personalize {
+    background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+}
+
+.personalize-panel {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+}
+
+.personalize-panel h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+}
+
+.personalize-panel > p {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.personalize-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.personalize-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.personalize-form input {
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 230, 255, 0.25);
+    background: var(--darker-bg);
+    color: var(--light-gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.95rem;
+}
+
+.personalize-form input:focus {
+    outline: none;
+    border-color: var(--cyan);
+}
+
+.personalize-actions {
+    text-align: center;
+}
+
+.personalize-actions button {
+    padding: 1rem 2.4rem;
+    background: linear-gradient(135deg, var(--cyan), var(--blue));
+    color: var(--darker-bg);
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.personalize-status {
+    text-align: center;
+    color: var(--cyan);
+    font-size: 0.88rem;
+    margin-top: 1.2rem;
+    min-height: 1.2rem;
+}
+
+.trade-final-cta {
+    text-align: center;
+    background: var(--t-bg-alt);
+}
+
+.trade-final-cta h2 {
+    margin-bottom: 1rem;
+}
+
+.trade-final-cta p {
+    color: var(--t-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.trade-site footer {
+    background: var(--t-bg-alt);
+    border-top: 1px solid var(--t-border);
+}
+
+.trade-site .footer-logo .logo-text {
+    color: var(--t-text);
+}
+
+.trade-site .footer-logo .tagline {
+    color: var(--t-accent);
+}
+
+.trade-site footer p,
+.trade-site footer a {
+    color: var(--t-muted);
+}
+
+.trade-site #contact-form input,
+.trade-site #contact-form textarea {
+    background: var(--t-bg-alt);
+    border: 1px solid var(--t-border);
+    color: var(--t-text);
+}
+
+.trade-site #contact-form input:focus,
+.trade-site #contact-form textarea:focus {
+    border-color: var(--t-accent);
+    box-shadow: 0 0 15px var(--t-glow);
+}
+
+.trade-site #contact-form button {
+    background: linear-gradient(135deg, var(--t-accent), var(--t-accent-2));
+    color: #1B1613;
+}
+
+.trade-site .contact-label {
+    color: var(--t-accent);
+}
+
+.trade-site .contact-item a:hover {
+    color: var(--t-accent);
+}
+
+@media (max-width: 1024px) {
+    .trade-hero .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .personalize-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .trade-hero {
+        text-align: center;
+        padding: 4rem 1.5rem 7rem;
+    }
+
+    .trade-hero .hero-lede {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .trade-hero .cta-row {
+        justify-content: center;
+    }
+
+    .personalize-panel {
+        padding: 1.8rem;
+    }
+}

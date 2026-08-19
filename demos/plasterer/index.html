@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="SmoothFinish Plastering — a demo plastering company website built by Shaka Tech, showing how an AI assistant can answer questions, capture leads and book callbacks automatically.">
+    <meta property="og:title" content="SmoothFinish Plastering Demo | Shaka Tech AI Websites">
+    <meta property="og:description" content="See how a Shaka Tech AI-powered website works for a plastering business — try the live AI assistant below.">
+    <meta property="og:type" content="website">
+    <title>SmoothFinish Plastering — Plasterer AI Website Demo | Shaka Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/assets/css/chatbot.css">
+    <link rel="stylesheet" href="/assets/css/demos.css">
+    <link rel="stylesheet" href="/assets/css/trade-signatures.css">
+</head>
+<body class="trade-site t-plasterer">
+    <div class="demo-banner">
+        🎬 You're viewing a Shaka Tech AI website demo for a fictional plastering business.
+        <a href="/demos/">← Back to all demos</a>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-text-container">
+                    <span class="logo-text" data-bind="businessName">SmoothFinish Plastering</span>
+                    <span class="tagline" data-bind="mainService">PLASTERING &amp; RENDERING</span>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="trade-hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="trade-eyebrow">Plastering Specialists</span>
+                    <h1>Expert plastering services across <span data-bind="town">West Yorkshire</span>.</h1>
+                    <p class="hero-lede">From smooth skims to external rendering, <span data-bind="businessName">SmoothFinish Plastering</span> gives every room a flawless finish — with a website that answers your questions any time, day or night.</p>
+                    <div class="cta-row">
+                        <button type="button" class="trade-cta" data-open-chat>Get a Free Quote</button>
+                        <button type="button" class="trade-cta trade-cta--outline" data-open-chat>Book a Callback</button>
+                    </div>
+                </div>
+                <div class="trade-hero-visual">
+                    <div class="trade-badge-icon">🛠️</div>
+                    <strong data-bind="businessName">SmoothFinish Plastering</strong>
+                    <span>Plastering Services in <span data-bind="town">West Yorkshire</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="section-head">
+                <h2>Our Services</h2>
+                <p>Everything you need for a flawless finish.</p>
+            </div>
+            <div class="services-grid" id="services-grid"></div>
+        </section>
+
+        <section id="about">
+            <div class="trade-about">
+                <h2>About <span data-bind="businessName">SmoothFinish Plastering</span></h2>
+                <p>We're a local plastering team serving <span data-bind="town">West Yorkshire</span>, dedicated to a flawless finish and honest pricing. From a single ceiling to a full render, we treat every job like it's our own home.</p>
+                <p>This page is a demonstration built by Shaka Tech — showing how an AI-powered website could work for a real plastering business.</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="trade-gallery">
+            <div class="section-head">
+                <h2>Recent Work</h2>
+            </div>
+            <p class="gallery-note">Example projects shown for demonstration purposes — not real completed jobs.</p>
+            <div class="gallery-grid" id="gallery-grid"></div>
+        </section>
+
+        <section id="areas" class="areas-section">
+            <div class="section-head">
+                <h2>Areas We Cover</h2>
+            </div>
+            <div class="areas-chips" id="areas-chips"></div>
+        </section>
+
+        <section id="reviews" class="trade-reviews">
+            <div class="section-head">
+                <h2>What Customers Say</h2>
+            </div>
+            <p class="reviews-note">Example customer feedback shown for demonstration purposes — not genuine reviews.</p>
+            <div class="reviews-grid" id="reviews-grid"></div>
+        </section>
+
+        <section id="faqs">
+            <div class="section-head">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="trade-faq" id="faq-list"></div>
+        </section>
+
+        <section id="personalize">
+            <div class="personalize-panel">
+                <h3>Make this demo yours</h3>
+                <p>See how this website could look for your own business.</p>
+                <form id="personalize-form" class="personalize-form">
+                    <label>Business Name
+                        <input type="text" name="businessName" placeholder="e.g. Smith Plastering">
+                    </label>
+                    <label>Town / City
+                        <input type="text" name="town" placeholder="e.g. Huddersfield">
+                    </label>
+                    <label>Main Service
+                        <input type="text" name="mainService" placeholder="e.g. Plastering & Rendering">
+                    </label>
+                </form>
+                <div class="personalize-actions">
+                    <button type="submit" form="personalize-form">Preview My Website</button>
+                </div>
+                <p class="personalize-status" id="personalize-status"></p>
+            </div>
+        </section>
+
+        <section class="trade-final-cta">
+            <h2>Imagine this working for your business.</h2>
+            <p>This is only a demonstration. Shaka Tech can build a fully customised version for your business, including your branding, services, AI assistant and booking system.</p>
+            <div class="cta-row" style="justify-content:center;">
+                <a href="/#contact" class="cta-button">Build My Website</a>
+                <a href="/#contact" class="btn-secondary">Book a Free Consultation</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">📞 Phone</span>
+                        <a href="tel:07700900123">07700 900123</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">✉️ Email</span>
+                        <a href="mailto:hello@smoothfinishplastering-demo.co.uk">hello@smoothfinishplastering-demo.co.uk</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">📍 Location</span>
+                        <span data-bind="town">West Yorkshire</span>
+                    </div>
+                </div>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone (optional)">
+                    <textarea name="message" placeholder="Tell us about your plastering project" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text" data-bind="businessName">SmoothFinish Plastering</span>
+                <span class="tagline">DEMO WEBSITE</span>
+            </div>
+            <p>This is a demo website built by <a href="/">Shaka Tech</a> to showcase AI-powered websites for tradespeople.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/trades/plasterer.js"></script>
+    <script src="/assets/js/trade-colors.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/script.js"></script>
+    <script src="/assets/js/personalize.js"></script>
+    <script>
+        const trade = window.SHAKA_TRADE;
+
+        document.getElementById('services-grid').innerHTML = trade.services.map((s) => `
+            <div class="service-card">
+                <div class="service-icon">${s.icon}</div>
+                <h3>${s.name}</h3>
+                <p>${s.desc}</p>
+            </div>
+        `).join('');
+
+        document.getElementById('gallery-grid').innerHTML = trade.gallery.map((g) => `
+            <div class="gallery-tile">
+                <div class="icon">${g.icon}</div>
+                <div class="caption">${g.caption}</div>
+            </div>
+        `).join('');
+
+        document.getElementById('areas-chips').innerHTML = trade.areas.map((a) => `<span class="area-chip">${a}</span>`).join('');
+
+        document.getElementById('reviews-grid').innerHTML = trade.reviews.map((r) => `
+            <div class="review-card">
+                <span class="demo-tag-corner">Demo Review</span>
+                <div class="stars">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div>
+                <p>"${r.text}"</p>
+                <div class="author">${r.author}</div>
+            </div>
+        `).join('');
+
+        document.getElementById('faq-list').innerHTML = trade.faqs.map((f) => `
+            <details class="faq-item">
+                <summary>${f.q}</summary>
+                <p>${f.a}</p>
+            </details>
+        `).join('');
+
+        window.shakaFloatingChat = new ShakaChatbot({
+            mode: 'floating',
+            persona: trade.chatbot.persona,
+            avatar: trade.chatbot.avatar,
+            businessName: trade.businessName,
+            greeting: trade.chatbot.greeting,
+            quickOptions: trade.chatbot.quickOptions,
+            knowledge: trade.chatbot.knowledge,
+            fallbackAnswer: trade.chatbot.fallbackAnswer,
+        });
+
+        document.querySelectorAll('[data-open-chat]').forEach((btn) => {
+            btn.addEventListener('click', () => window.shakaFloatingChat.open());
+        });
+    </script>
+</body>
+</html>
