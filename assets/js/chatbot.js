@@ -33,6 +33,13 @@ class ShakaChatbot {
 
     setBusinessName(name) {
         this.businessName = name;
+        this.persona = `${name} Assistant`;
+        if (this.titleNode) {
+            this.titleNode.textContent = this.persona;
+        }
+        if (this.launcherEl) {
+            this.launcherEl.setAttribute('aria-label', 'Open chat with ' + this.persona);
+        }
         if (this.greetingNode) {
             this.greetingNode.textContent = this._greetingText();
         }
@@ -60,6 +67,7 @@ class ShakaChatbot {
         `;
 
         this.body = wrap.querySelector('.shaka-chat__body');
+        this.titleNode = wrap.querySelector('.shaka-chat__title');
         this.chatEl = wrap;
 
         if (isFloating) {
@@ -233,10 +241,17 @@ class ShakaChatbot {
             postcode: "What's your postcode, so we know the area?",
             problem: "In a few words, what do you need help with?",
         };
+        const placeholders = {
+            name: 'Your name…',
+            phone: 'Your phone number…',
+            email: 'Your email address…',
+            postcode: 'Your postcode…',
+            problem: 'Briefly describe the issue…',
+        };
 
         if (step === 'name' || step === 'phone' || step === 'email' || step === 'postcode' || step === 'problem') {
             await this._botSay(prompts[step]);
-            this._showTextInput(prompts[step], (val) => this._receiveLeadField(step, val));
+            this._showTextInput(placeholders[step], (val) => this._receiveLeadField(step, val));
         }
     }
 
