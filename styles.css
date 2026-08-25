@@ -797,6 +797,13 @@ h2 {
     letter-spacing: 1px;
 }
 
+.icon-whatsapp {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: -0.15rem;
+    fill: #25D366;
+}
+
 .contact-item a {
     color: var(--light-gray);
     text-decoration: none;
@@ -859,6 +866,33 @@ h2 {
 #contact-form button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(0, 230, 255, 0.4);
+}
+
+#contact-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.form-status {
+    min-height: 1.2em;
+    font-size: 0.95rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.form-status--success {
+    color: #2ecc71;
+}
+
+#contact-form input.field-invalid,
+#contact-form textarea.field-invalid {
+    border-color: #ff5c5c;
+    box-shadow: 0 0 15px rgba(255, 92, 92, 0.2);
+}
+
+.form-status--error {
+    color: #ff5c5c;
 }
 
 footer {

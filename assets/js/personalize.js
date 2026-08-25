@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!form) return;
 
     const status = document.getElementById('personalize-status');
+    if (!status) return;
+
     const defaults = {
         businessName: window.SHAKA_TRADE ? window.SHAKA_TRADE.businessName : '',
         town: window.SHAKA_TRADE ? window.SHAKA_TRADE.town : '',

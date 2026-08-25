@@ -42,13 +42,18 @@
     --t-glow: color-mix(in srgb, var(--t-accent) 16%, transparent);
     background: var(--t-bg);
     color: var(--t-text);
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--t-body-font, 'Raleway', sans-serif);
 }
 
 .trade-site header {
-    background: var(--t-bg-alt);
+    background: var(--t-header-bg, var(--t-bg-alt));
     border-bottom: 1px solid var(--t-border);
     box-shadow: none;
+}
+
+.trade-site header .logo-text,
+.trade-site header .nav-links a {
+    color: var(--t-header-text, var(--t-text));
 }
 
 .trade-site .logo-text {
@@ -80,7 +85,7 @@
 .trade-hero {
     text-align: left;
     padding: 6rem 2rem;
-    background: linear-gradient(135deg, var(--t-bg-alt) 0%, var(--t-bg) 100%);
+    background: var(--t-bg);
     position: relative;
 }
 
@@ -93,22 +98,14 @@
     align-items: center;
 }
 
-.trade-hero .trade-eyebrow {
-    color: var(--t-accent);
-    font-family: var(--t-heading-font);
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-    display: block;
-}
-
 .trade-hero h1 {
     font-family: var(--t-heading-font);
-    font-size: 2.9rem;
+    font-size: 3.6rem;
+    font-weight: 700;
     color: var(--t-text);
     letter-spacing: 0.5px;
-    line-height: 1.2;
-    margin-bottom: 1.2rem;
+    line-height: 1.08;
+    margin-bottom: 1.3rem;
 }
 
 .trade-hero .hero-lede {
@@ -144,29 +141,89 @@
     border: 1px solid var(--t-accent);
 }
 
-.trade-hero-visual {
-    background: var(--t-bg-alt);
-    border: 1px solid var(--t-border);
-    border-radius: var(--t-radius);
-    padding: 2rem;
-    text-align: center;
+.trade-cta--small {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
 }
 
-.trade-hero-visual .trade-badge-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+.trade-cta--dark {
+    background: #0B0B0B;
+    color: #fff;
+}
+
+.trade-hero-visual {
+    position: relative;
+    aspect-ratio: 4 / 3.1;
+    border-radius: var(--t-radius);
+    overflow: hidden;
+    background: var(--t-bg-alt);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 0.75rem;
+}
+
+.trade-hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text/emoji badge variant of the hero visual (every trade but roofer,
+   which uses a real photo instead) — none of this had base sizing before,
+   so the icon rendered at browser-default text size and the name/tagline
+   sat unstyled in the corner instead of reading as a centred badge. */
+.trade-badge-icon {
+    font-size: 4.5rem;
+    line-height: 1;
 }
 
 .trade-hero-visual strong {
-    display: block;
     font-family: var(--t-heading-font);
+    font-size: 1.3rem;
     color: var(--t-text);
-    margin-bottom: 0.4rem;
 }
 
-.trade-hero-visual span {
+.trade-hero-visual > span {
     color: var(--t-muted);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+}
+
+/* Full-bleed hero photo variant: the photo is the whole section's
+   background (not a separate boxed panel), with a gradient scrim so the
+   text column stays legible over it. */
+.trade-hero--photo-bg {
+    overflow: hidden;
+}
+
+.trade-hero--photo-bg .hero-bg-photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.trade-hero--photo-bg .hero-bg-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.trade-hero--photo-bg .hero-bg-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, var(--t-bg) 0%, color-mix(in srgb, var(--t-bg) 85%, transparent) 42%, color-mix(in srgb, var(--t-bg) 20%, transparent) 68%, transparent 100%);
+}
+
+.trade-hero--photo-bg .hero-grid {
+    position: relative;
+    z-index: 1;
+    grid-template-columns: 1fr;
 }
 
 .trade-site section {
@@ -186,7 +243,7 @@
     color: var(--t-muted);
 }
 
-.trade-site #services {
+.trade-site #services:not(.featured-services) {
     background: var(--t-bg-alt);
 }
 
@@ -194,6 +251,242 @@
     background: var(--t-bg);
     border: 1px solid var(--t-border-soft);
     border-radius: var(--t-radius);
+}
+
+/* Compact strip variant: plain icon + title + description directly on the
+   section background, no card chrome, no section heading — for a trade
+   whose pinned brief shows services as a tight band right under the hero. */
+.trade-site section.services-strip {
+    padding: 3rem 2rem;
+}
+
+.trade-site section.services-strip .section-head {
+    display: none;
+}
+
+.trade-site .services-grid.is-strip {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+}
+
+@media (max-width: 760px) {
+    .trade-site .services-grid.is-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.trade-site .services-grid.is-strip .service-card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-align: center;
+    clip-path: none;
+}
+
+.trade-site .services-grid.is-strip .service-card:hover {
+    box-shadow: none;
+}
+
+.trade-site .services-grid.is-strip .service-icon {
+    margin: 0 auto 0.8rem;
+}
+
+.trade-site .services-grid.is-strip .service-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.trade-site .services-grid.is-strip .service-card p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+/* Two-column "quality" section: copy + checklist on one side, a photo on
+   the other. First used by Builder, generic enough for any trade whose
+   brief wants a reassurance list next to a supporting image. */
+/* #about carries a bare-ID background rule in the main site's own
+   styles.css (also loaded on every demo page) — a plain class here loses
+   to that ID's specificity, so this needs the #about.quality-section
+   combo to actually win and show the trade's own colour. */
+.trade-site #about.quality-section {
+    background: var(--t-bg-alt);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .trade-site .quality-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.trade-site .quality-copy h2 {
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+
+.trade-site #about .quality-copy > p {
+    color: var(--t-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.trade-site .checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trade-site .checklist li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--t-heading-font);
+    font-size: 1.05rem;
+    color: var(--t-text);
+}
+
+.trade-site .check-icon {
+    flex: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--t-accent);
+}
+
+.trade-site .check-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.trade-site .quality-photo {
+    border-radius: var(--t-radius);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.trade-site .quality-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Recent-projects section: a row of photo thumbnails next to a stat
+   block. Generic layout, first used by Builder. */
+.trade-site .projects-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .trade-site .projects-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.trade-site .projects-main .section-head {
+    text-align: left;
+}
+
+.trade-site .projects-main .section-head h2 {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.trade-site .project-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .trade-site .project-thumbs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.trade-site .project-thumb {
+    border-radius: calc(var(--t-radius) * 0.6);
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.trade-site .project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.trade-site .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--t-accent);
+    border-radius: var(--t-radius);
+    overflow: hidden;
+}
+
+.trade-site .stat-item {
+    background: var(--t-accent);
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.trade-site .stat-number {
+    font-family: var(--t-heading-font);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.trade-site .stat-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.trade-site .projects-cta {
+    max-width: 1300px;
+    margin: 3rem auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.trade-site .projects-cta p {
+    font-family: var(--t-heading-font);
+    font-size: 1.2rem;
+    color: var(--t-text);
+}
+
+.trade-site .service-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-bottom: 1.5rem;
+    filter: none;
+}
+
+.trade-site .service-icon svg {
+    width: 100%;
+    height: 100%;
+    color: var(--t-accent);
 }
 
 .trade-site .service-card:hover {
@@ -207,6 +500,151 @@
 
 .trade-site .service-card p {
     color: var(--t-muted);
+}
+
+/* Featured-services photo strip: a light band breaking up the otherwise
+   all-dark trade-site theme so the work photos read clearly, sitting
+   between the hero and the rest of the dark page. Reuses --t-bg (the
+   trade's own dark tone) as the ink/caption color here since it's already
+   the exact navy this band needs on a light background. */
+.trade-site #services.featured-services {
+    background: #F3F5F8;
+    color: var(--t-bg);
+    padding: 4.5rem 2rem;
+}
+
+.trade-site .featured-services .section-head h2 {
+    color: var(--t-bg);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.8rem;
+}
+
+.trade-site .featured-services .section-head h2::before,
+.trade-site .featured-services .section-head h2::after {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: var(--t-accent);
+    flex: none;
+}
+
+.trade-site .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    max-width: 1100px;
+    margin: 3rem auto 0;
+}
+
+@media (max-width: 760px) {
+    .trade-site .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.trade-site .feature-card {
+    border-radius: var(--t-radius);
+    overflow: hidden;
+}
+
+.trade-site .feature-card-photo {
+    aspect-ratio: 4 / 3;
+}
+
+.trade-site .feature-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.trade-site .feature-card-caption {
+    background: var(--t-bg);
+    padding: 1.8rem 1rem 2rem;
+    text-align: center;
+}
+
+.trade-site .feature-card-icon {
+    display: inline-flex;
+    width: 2.6rem;
+    height: 2.6rem;
+    color: var(--t-accent);
+    margin-bottom: 0.8rem;
+}
+
+.trade-site .feature-card-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.trade-site .feature-card-caption h3 {
+    color: var(--t-text);
+    font-family: var(--t-heading-font);
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Trust bar: a dark strip of quick reassurance points under the featured
+   services, divided by hairlines like a spec-sheet footer. */
+.trade-site .trust-bar {
+    background: var(--t-bg);
+    padding: 2.5rem 2rem;
+}
+
+.trade-site .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.trade-site .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0 1.5rem;
+    border-left: 1px solid var(--t-border);
+}
+
+.trade-site .trust-item:first-child {
+    border-left: none;
+}
+
+.trade-site .trust-icon {
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+    color: var(--t-accent);
+}
+
+.trade-site .trust-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.trade-site .trust-item span:last-child {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+    color: var(--t-text);
+    text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+    .trade-site .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem 1rem;
+    }
+    .trade-site .trust-item {
+        border-left: none;
+        padding: 0;
+    }
 }
 
 .trade-about {
@@ -250,7 +688,14 @@
 }
 
 .gallery-tile .icon {
-    font-size: 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    color: var(--t-accent);
+}
+
+.gallery-tile .icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .gallery-tile .caption {
@@ -392,23 +837,23 @@
     font-size: 0.92rem;
 }
 
-/* ===== Personalisation panel ===== */
-.personalize {
-    background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
-}
-
+/* ===== Personalisation panel =====
+   Only ever used on trade demo pages (never the main site), but these
+   rules hardcoded the main site's own dark palette instead of the
+   trade's --t-* theme variables — so it silently depended on every trade
+   happening to be dark-themed, and broke as soon as one (Builder) wasn't. */
 .personalize-panel {
     max-width: 720px;
     margin: 0 auto;
-    background: var(--card-bg);
-    border: 1px solid var(--border-soft);
-    border-radius: var(--radius-lg);
+    background: var(--t-bg-alt);
+    border: 1px solid var(--t-border);
+    border-radius: var(--t-radius);
     padding: 2.5rem;
 }
 
 .personalize-panel h3 {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--white);
+    font-family: var(--t-heading-font);
+    color: var(--t-text);
     text-align: center;
     margin-bottom: 0.6rem;
     font-size: 1.3rem;
@@ -416,7 +861,7 @@
 
 .personalize-panel > p {
     text-align: center;
-    color: var(--muted);
+    color: var(--t-muted);
     margin-bottom: 2rem;
     font-size: 0.95rem;
 }
@@ -433,23 +878,23 @@
     flex-direction: column;
     gap: 0.5rem;
     font-size: 0.8rem;
-    color: var(--muted);
+    color: var(--t-muted);
     font-weight: 600;
 }
 
 .personalize-form input {
     padding: 0.9rem 1rem;
     border-radius: 8px;
-    border: 1px solid rgba(0, 230, 255, 0.25);
-    background: var(--darker-bg);
-    color: var(--light-gray);
-    font-family: 'Raleway', sans-serif;
+    border: 1px solid var(--t-border);
+    background: var(--t-bg);
+    color: var(--t-text);
+    font-family: var(--t-body-font, inherit);
     font-size: 0.95rem;
 }
 
 .personalize-form input:focus {
     outline: none;
-    border-color: var(--cyan);
+    border-color: var(--t-accent);
 }
 
 .personalize-actions {
@@ -458,8 +903,8 @@
 
 .personalize-actions button {
     padding: 1rem 2.4rem;
-    background: linear-gradient(135deg, var(--cyan), var(--blue));
-    color: var(--darker-bg);
+    background: linear-gradient(135deg, var(--t-accent), var(--t-accent-2));
+    color: #1B1613;
     border: none;
     border-radius: 50px;
     font-weight: 700;
@@ -469,7 +914,7 @@
 
 .personalize-status {
     text-align: center;
-    color: var(--cyan);
+    color: var(--t-accent);
     font-size: 0.88rem;
     margin-top: 1.2rem;
     min-height: 1.2rem;
@@ -506,6 +951,25 @@
 
 .trade-site footer p,
 .trade-site footer a {
+    color: var(--t-muted);
+}
+
+/* #contact carries a bare-ID dark background in the main site's own
+   styles.css (also loaded on every demo page) — a plain class can't win
+   against that ID's specificity, so this needs the ID too. --t-bg (not
+   --t-bg-alt) so the cream/dark input fields below still read as boxes
+   against it instead of blending into a same-toned section. */
+.trade-site #contact {
+    background: var(--t-bg);
+}
+
+.trade-site #contact .contact-item a,
+.trade-site #contact .contact-item span:not(.contact-label) {
+    color: var(--t-text);
+}
+
+.trade-site #contact-form input::placeholder,
+.trade-site #contact-form textarea::placeholder {
     color: var(--t-muted);
 }
 

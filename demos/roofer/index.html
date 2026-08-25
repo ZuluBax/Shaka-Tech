@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="description" content="Apex Roofing — a demo roofing company website built by Shaka Tech, showing how an AI assistant can answer questions, capture leads and book callbacks automatically.">
-    <meta property="og:title" content="Apex Roofing Demo | Shaka Tech AI Websites">
+    <meta name="description" content="Shaka Roofer — a demo roofing company website built by Shaka Tech, showing how an AI assistant can answer questions, capture leads and book callbacks automatically.">
+    <meta property="og:title" content="Shaka Roofer Demo | Shaka Tech AI Websites">
     <meta property="og:description" content="See how a Shaka Tech AI-powered website works for a roofing business — try the live AI assistant below.">
     <meta property="og:type" content="website">
-    <title>Apex Roofing — Roofer AI Website Demo | Shaka Tech</title>
+    <title>Shaka Roofer — Roofer AI Website Demo | Shaka Tech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css?v=2">
     <link rel="stylesheet" href="/assets/css/chatbot.css">
-    <link rel="stylesheet" href="/assets/css/demos.css">
-    <link rel="stylesheet" href="/assets/css/trade-signatures.css">
+    <link rel="stylesheet" href="/assets/css/demos.css?v=5">
+    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=4">
 </head>
 <body class="trade-site t-roofer">
     <div class="demo-banner">
@@ -26,7 +25,7 @@
         <nav>
             <div class="logo">
                 <div class="logo-text-container">
-                    <span class="logo-text" data-bind="businessName">Apex Roofing</span>
+                    <span class="logo-text" data-bind="businessName">Shaka Roofer</span>
                     <span class="tagline" data-bind="mainService">ROOF REPAIRS &amp; REPLACEMENT</span>
                 </div>
             </div>
@@ -34,51 +33,48 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a class="trade-cta trade-cta--small" href="#contact" data-open-chat>Get a Quote</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="trade-hero">
+        <section id="home" class="trade-hero trade-hero--photo-bg">
+            <div class="hero-bg-photo">
+                <img src="/assets/images/demos/roofer-hero.jpg" alt="A black tiled roof with a dormer window against a sunset sky" loading="eager">
+            </div>
             <div class="hero-grid">
                 <div class="hero-content">
-                    <span class="trade-eyebrow">Roofing Specialists</span>
-                    <h1>Professional roofing services across <span data-bind="town">West Yorkshire</span>.</h1>
-                    <p class="hero-lede">From emergency leak repairs to full roof replacements, <span data-bind="businessName">Apex Roofing</span> keeps your home protected — with a website that answers your questions any time, day or night.</p>
+                    <h1>QUALITY ROOFING.<br>BUILT TO LAST.</h1>
+                    <p class="hero-lede">Reliable roofing services with quality you can trust — an AI assistant on this website answers questions and books call-outs any time, day or night.</p>
                     <div class="cta-row">
                         <button type="button" class="trade-cta" data-open-chat>Get a Free Quote</button>
-                        <button type="button" class="trade-cta trade-cta--outline" data-open-chat>Book a Callback</button>
+                        <a href="#services" class="trade-cta trade-cta--outline">Our Services</a>
                     </div>
-                </div>
-                <div class="trade-hero-visual">
-                    <div class="trade-badge-icon">🏠</div>
-                    <strong data-bind="businessName">Apex Roofing</strong>
-                    <span>Roofing Services in <span data-bind="town">West Yorkshire</span></span>
                 </div>
             </div>
         </section>
 
-        <svg class="roofline-divider" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 30 L100 8 L200 30 L300 8 L400 30 L500 8 L600 30 L700 8 L800 30 L900 8 L1000 30 L1100 8 L1200 30" />
-        </svg>
-
-        <section id="services">
+        <section id="services" class="featured-services">
             <div class="section-head">
-                <h2>Our Services</h2>
-                <p>Everything you need for a roof that lasts.</p>
+                <h2>ROOFING BUILT FOR BRITISH WEATHER</h2>
             </div>
-            <div class="services-grid" id="services-grid"></div>
+            <div class="featured-grid" id="featured-grid"></div>
+        </section>
+
+        <section class="trust-bar">
+            <div class="trust-grid" id="trust-grid"></div>
         </section>
 
         <section id="about">
             <div class="trade-about">
-                <h2>About <span data-bind="businessName">Apex Roofing</span></h2>
+                <h2>About <span data-bind="businessName">Shaka Roofer</span></h2>
                 <p>We're a local roofing team serving <span data-bind="town">West Yorkshire</span>, dedicated to quality workmanship and honest pricing. From small repairs to full re-roofs, we treat every job like it's our own home.</p>
                 <p>This page is a demonstration built by Shaka Tech — showing how an AI-powered website could work for a real roofing business.</p>
             </div>
@@ -155,7 +151,7 @@
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">✉️ Email</span>
-                        <a href="mailto:hello@apexroofing-demo.co.uk">hello@apexroofing-demo.co.uk</a>
+                        <a href="mailto:hello@shakaroofer-demo.co.uk">hello@shakaroofer-demo.co.uk</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">📍 Location</span>
@@ -176,32 +172,55 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <span class="logo-text" data-bind="businessName">Apex Roofing</span>
+                <span class="logo-text" data-bind="businessName">Shaka Roofer</span>
                 <span class="tagline">DEMO WEBSITE</span>
             </div>
             <p>This is a demo website built by <a href="/">Shaka Tech</a> to showcase AI-powered websites for tradespeople.</p>
         </div>
     </footer>
 
-    <script src="/assets/trades/roofer.js"></script>
+    <script src="/assets/trades/roofer.js?v=2"></script>
+    <script src="/assets/js/trade-icons.js?v=2"></script>
     <script src="/assets/js/trade-colors.js"></script>
     <script src="/assets/js/chatbot.js"></script>
-    <script src="/script.js"></script>
+    <script src="/script.js?v=2"></script>
     <script src="/assets/js/personalize.js"></script>
     <script>
         const trade = window.SHAKA_TRADE;
 
-        document.getElementById('services-grid').innerHTML = trade.services.map((s) => `
-            <div class="service-card">
-                <div class="service-icon">${s.icon}</div>
-                <h3>${s.name}</h3>
-                <p>${s.desc}</p>
+        const featured = [
+            { icon: 'roofNew', label: 'New Roofs', img: '/assets/images/demos/roofer-hero.jpg', pos: '55% 45%', alt: 'A newly tiled pitched roof with a dormer window at sunset' },
+            { icon: 'hammer', label: 'Repairs', img: '/assets/images/demos/roofer-repair.jpg', pos: '40% 40%', alt: 'A roofer kneeling on a slate roof mid-repair, replacing tiles next to a chimney' },
+            { icon: 'cloudRain', label: 'Flat Roofing', img: '/assets/images/demos/roofer-flatroof.jpg', pos: '50% 55%', alt: 'A modern flat roof with a skylight and a timber-clad roof extension' },
+        ];
+
+        document.getElementById('featured-grid').innerHTML = featured.map((f) => `
+            <article class="feature-card">
+                <div class="feature-card-photo"><img src="${f.img}" alt="${f.alt}" style="object-position:${f.pos}" loading="lazy"></div>
+                <div class="feature-card-caption">
+                    <span class="feature-card-icon">${tradeIcon(f.icon)}</span>
+                    <h3>${f.label}</h3>
+                </div>
+            </article>
+        `).join('');
+
+        const trustPoints = [
+            { icon: 'shieldCheck', label: 'Quality<br>Workmanship' },
+            { icon: 'cloudRain', label: 'Built for<br>British Weather' },
+            { icon: 'badge', label: 'Reliable<br>Service' },
+            { icon: 'person', label: 'Expert<br>Roofers' },
+        ];
+
+        document.getElementById('trust-grid').innerHTML = trustPoints.map((t) => `
+            <div class="trust-item">
+                <span class="trust-icon">${tradeIcon(t.icon)}</span>
+                <span>${t.label}</span>
             </div>
         `).join('');
 
         document.getElementById('gallery-grid').innerHTML = trade.gallery.map((g) => `
             <div class="gallery-tile">
-                <div class="icon">${g.icon}</div>
+                <div class="icon">${tradeIcon(g.icon)}</div>
                 <div class="caption">${g.caption}</div>
             </div>
         `).join('');

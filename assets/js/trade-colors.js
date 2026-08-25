@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
         bgAlt: '--t-bg-alt',
         text: '--t-text',
         muted: '--t-muted',
+        headerBg: '--t-header-bg',
+        headerText: '--t-header-text',
         headingFont: '--t-heading-font',
+        bodyFont: '--t-body-font',
         radius: '--t-radius',
     };
 

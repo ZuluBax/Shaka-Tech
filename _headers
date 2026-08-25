@@ -1,0 +1,29 @@
+# Cloudflare Pages caches static assets for 4 hours by default. That's fine
+# once a page is stable, but CSS/JS/demo photos all get replaced under the
+# same filename while a page is under active work, and a 4-hour-stale file
+# after a deploy looks exactly like a broken page. `no-cache` still lets
+# browsers keep a local copy, but forces them to check with the server (via
+# ETag) before reusing it, so edits show up immediately.
+/styles.css
+  Cache-Control: no-cache
+
+/script.js
+  Cache-Control: no-cache
+
+/assets/css/*
+  Cache-Control: no-cache
+
+/assets/js/*
+  Cache-Control: no-cache
+
+/assets/trades/*
+  Cache-Control: no-cache
+
+/assets/images/demos/*
+  Cache-Control: no-cache
+
+/assets/images/logo.png
+  Cache-Control: no-cache
+
+/favicon.ico
+  Cache-Control: no-cache

@@ -17,6 +17,15 @@ class ShakaChatbot {
         this.fallbackAnswer = config.fallbackAnswer ||
             "I don't have that detail in this demo, but a real Shaka AI assistant would be trained on your business's exact services and FAQs. Want me to arrange a callback instead?";
 
+        // Optional: when set, "Ask a question" calls the real Control Centre
+        // gateway (control-centre/receptionist-gateway) instead of the local
+        // keyword-matched simulation below — a genuine tenant, real status/origin
+        // checks, real usage logging, zero cost (mock model, Phase 2). Leave unset
+        // (the default everywhere except the homepage) to keep the fully simulated
+        // demo behaviour described at the top of this file.
+        this.gatewayTenantId = config.gatewayTenantId || null;
+        this.gatewayUrl = config.gatewayUrl || 'https://gateway.shakatech.co.uk';
+
         this.lead = {};
         this.flowStep = null;
         this.greetingNode = null;
@@ -227,10 +236,34 @@ class ShakaChatbot {
     }
 
     async _answerQuestion(question) {
+        const reply = this.gatewayTenantId
+            ? await this._askGateway(question)
+            : this._answerFromLocalKnowledge(question);
+        await this._botSay(reply);
+        this._showQuickReplies(['Get a quote', 'Book a callback', 'Ask another question']);
+    }
+
+    _answerFromLocalKnowledge(question) {
         const q = question.toLowerCase();
         const match = this.knowledge.find((k) => k.keywords.some((kw) => q.includes(kw)));
-        await this._botSay(match ? match.answer : this.fallbackAnswer);
-        this._showQuickReplies(['Get a quote', 'Book a callback', 'Ask another question']);
+        return match ? match.answer : this.fallbackAnswer;
+    }
+
+    async _askGateway(question) {
+        try {
+            const res = await fetch(this.gatewayUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    tenantId: this.gatewayTenantId,
+                    messages: [{ role: 'user', content: question }],
+                }),
+            });
+            const data = await res.json();
+            return data.reply || this.fallbackAnswer;
+        } catch (err) {
+            return "Sorry, the test gateway isn't reachable right now — please try again in a moment.";
+        }
     }
 
     async _collectLead(step) {

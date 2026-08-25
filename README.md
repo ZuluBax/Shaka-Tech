@@ -2,11 +2,28 @@
 
 A modern company website built for Cloudflare Pages/Workers hosting.
 
+**Live site:** `https://shakatech.co.uk` currently serves the `coming-soon/` page
+(Pages project `shakatech`) — leave that project alone.
+
+**Private test copy:** the real site (this folder's `index.html` + `demos/`, excluding
+`versions/` and `coming-soon/`) is deployed separately to Pages project
+`shakatech-test`, reachable at `https://test.shakatech.co.uk`. It's gated by
+Cloudflare Access (same "Staff email only" policy as the Control Centre project) so it
+never gets found by real visitors. Redeploy with
+`wrangler pages deploy . --project-name=shakatech-test` from this folder (it respects
+`.gitignore`, so `versions/`, `coming-soon/`, `.git`, and `.wrangler` are skipped
+automatically).
+
 ## Features
 
 - Responsive design
 - Smooth scroll navigation
-- Contact form
+- Contact form — real, wired to [Web3Forms](https://web3forms.com) (`script.js`'s
+  `#contact-form` submit handler), delivers Name/Email/Phone/Message straight to
+  `hello@shakatech.co.uk`. No backend of our own; the access key lives in a hidden
+  input in `index.html` (safe to be public — that's how Web3Forms keys work) and
+  captcha is turned off on the Web3Forms side in favour of the `botcheck` honeypot
+  field already in the form.
 - Service showcase
 - Clean, modern UI
 

@@ -4,14 +4,14 @@
  * /demos/{id}/ page) to expand the showroom without touching layout code.
  */
 const SHAKA_TRADES = [
-    { id: 'roofer', name: 'Roofer', icon: '🏠', blurb: 'Roof repairs, new roofs and emergency call-outs.', status: 'live' },
-    { id: 'builder', name: 'Builder', icon: '🧱', blurb: 'Extensions, renovations and new builds.', status: 'live' },
-    { id: 'electrician', name: 'Electrician', icon: '⚡', blurb: 'Rewiring, consumer units and EV chargers.', status: 'live' },
-    { id: 'plumber', name: 'Plumber', icon: '🚰', blurb: 'Emergency plumbing, leaks and bathrooms.', status: 'live' },
-    { id: 'joiner', name: 'Joiner', icon: '🪚', blurb: 'Bespoke furniture, doors and staircases.', status: 'live' },
-    { id: 'landscaper', name: 'Landscaper', icon: '🌳', blurb: 'Garden design, patios and driveways.', status: 'live' },
-    { id: 'plasterer', name: 'Plasterer', icon: '🛠️', blurb: 'Skimming, rendering and dry lining.', status: 'live' },
-    { id: 'dog-walker', name: 'Dog Walker & Groomer', icon: '🐕', blurb: 'Dog walking, grooming and pet care bookings.', status: 'live' },
+    { id: 'roofer', name: 'Shaka Roofer', icon: '🏠', blurb: 'Roof repairs, new roofs and emergency call-outs.', status: 'live' },
+    { id: 'builder', name: 'Shaka Builder', icon: '🧱', blurb: 'Extensions, renovations and new builds.', status: 'live' },
+    { id: 'electrician', name: 'Shaka Electrician', icon: '⚡', blurb: 'Rewiring, consumer units and EV chargers.', status: 'live' },
+    { id: 'plumber', name: 'Shaka Plumber', icon: '🚰', blurb: 'Emergency plumbing, leaks and bathrooms.', status: 'live' },
+    { id: 'joiner', name: 'Shaka Joiner', icon: '🪚', blurb: 'Bespoke furniture, doors and staircases.', status: 'live' },
+    { id: 'landscaper', name: 'Shaka Landscaper', icon: '🌳', blurb: 'Garden design, patios and driveways.', status: 'live' },
+    { id: 'plasterer', name: 'Shaka Plasterer', icon: '🛠️', blurb: 'Skimming, rendering and dry lining.', status: 'live' },
+    { id: 'dog-walker', name: 'Shaka Dog Walker & Groomer', icon: '🐕', blurb: 'Dog walking, grooming and pet care bookings.', status: 'live' },
 ];
 
 function renderTradeCards(containerSelector) {

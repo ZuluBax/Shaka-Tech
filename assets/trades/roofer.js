@@ -1,5 +1,5 @@
 /**
- * Trade configuration for the Roofer demo (Apex Roofing).
+ * Trade configuration for the Roofer demo (Shaka Roofer).
  * Drives the AI chatbot's persona/knowledge and the personalisation panel.
  * To add a new trade, copy this file, adjust the fields, and build a
  * matching /demos/{id}/ page using the same reusable CSS classes.
@@ -7,17 +7,21 @@
 window.SHAKA_TRADE = {
     id: 'roofer',
     trade: 'Roofing',
-    businessName: 'Apex Roofing',
+    businessName: 'Shaka Roofer',
     town: 'West Yorkshire',
     mainService: 'Roof Repairs & Replacement',
 
     theme: {
-        accent: '#FF7A1A',
-        accent2: '#FFB177',
-        bg: '#14100D',
-        bgAlt: '#1B1613',
+        accent: '#60A5FA',
+        accent2: '#38BDF8',
+        bg: '#0F172A',
+        bgAlt: '#1E3A8A',
+        text: '#F8FAFC',
+        headerBg: '#0F172A',
+        headerText: '#F8FAFC',
         headingFont: "'Oswald', sans-serif",
-        googleFont: 'family=Oswald:wght@500;600;700',
+        bodyFont: "'Open Sans', sans-serif",
+        googleFont: 'family=Oswald:wght@500;600;700&family=Open+Sans:wght@400;500;600;700',
         radius: '8px',
     },
 
@@ -39,21 +43,21 @@ window.SHAKA_TRADE = {
     },
 
     services: [
-        { icon: '🏠', name: 'Roof Repairs', desc: 'Fast, reliable repairs for leaks, storm damage and worn roofing.' },
-        { icon: '🔨', name: 'New Roofs', desc: 'Full roof replacements built to last, with a workmanship guarantee.' },
-        { icon: '🌧️', name: 'Flat Roofing', desc: 'EPDM and felt flat roof installation and repair.' },
-        { icon: '💧', name: 'Guttering', desc: 'Gutter clearing, repair and replacement to keep water moving.' },
-        { icon: '📐', name: 'Fascias & Soffits', desc: 'Fresh, low-maintenance fascias and soffits for a finished look.' },
-        { icon: '🚨', name: 'Emergency Repairs', desc: 'Priority call-outs for leaks and storm damage.' },
+        { icon: 'home', name: 'Roof Repairs', desc: 'Fast, reliable repairs for leaks, storm damage and worn roofing.' },
+        { icon: 'roofNew', name: 'New Roofs', desc: 'Full roof replacements built to last, with a workmanship guarantee.' },
+        { icon: 'cloudRain', name: 'Flat Roofing', desc: 'EPDM and felt flat roof installation and repair.' },
+        { icon: 'droplet', name: 'Guttering', desc: 'Gutter clearing, repair and replacement to keep water moving.' },
+        { icon: 'ruler', name: 'Fascias & Soffits', desc: 'Fresh, low-maintenance fascias and soffits for a finished look.' },
+        { icon: 'alertTriangle', name: 'Emergency Repairs', desc: 'Priority call-outs for leaks and storm damage.' },
     ],
 
     gallery: [
-        { icon: '🏠', caption: 'Full re-roof — Leeds' },
-        { icon: '🔧', caption: 'Emergency leak repair — Huddersfield' },
-        { icon: '🌧️', caption: 'Flat roof install — Bradford' },
-        { icon: '💧', caption: 'Guttering upgrade — Wakefield' },
-        { icon: '📐', caption: 'Fascia & soffit refresh — Halifax' },
-        { icon: '🏗️', caption: 'New build roofing — Dewsbury' },
+        { icon: 'home', caption: 'Full re-roof — Leeds' },
+        { icon: 'wrench', caption: 'Emergency leak repair — Huddersfield' },
+        { icon: 'cloudRain', caption: 'Flat roof install — Bradford' },
+        { icon: 'droplet', caption: 'Guttering upgrade — Wakefield' },
+        { icon: 'ruler', caption: 'Fascia & soffit refresh — Halifax' },
+        { icon: 'hammer', caption: 'New build roofing — Dewsbury' },
     ],
 
     areas: ['Leeds', 'Huddersfield', 'Bradford', 'Wakefield', 'Halifax', 'Dewsbury', 'Batley', 'Pontefract'],

@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="description" content="Ridgeline Builders — a demo building company website built by Shaka Tech, showing how an AI assistant can answer questions, capture leads and book callbacks automatically.">
-    <meta property="og:title" content="Ridgeline Builders Demo | Shaka Tech AI Websites">
+    <meta name="description" content="Shaka Builder — a demo building company website built by Shaka Tech, showing how an AI assistant can answer questions, capture leads and book callbacks automatically.">
+    <meta property="og:title" content="Shaka Builder Demo | Shaka Tech AI Websites">
     <meta property="og:description" content="See how a Shaka Tech AI-powered website works for a building business — try the live AI assistant below.">
     <meta property="og:type" content="website">
-    <title>Ridgeline Builders — Builder AI Website Demo | Shaka Tech</title>
+    <title>Shaka Builder — Builder AI Website Demo | Shaka Tech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css?v=2">
     <link rel="stylesheet" href="/assets/css/chatbot.css">
-    <link rel="stylesheet" href="/assets/css/demos.css">
-    <link rel="stylesheet" href="/assets/css/trade-signatures.css">
+    <link rel="stylesheet" href="/assets/css/demos.css?v=5">
+    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=4">
 </head>
 <body class="trade-site t-builder">
     <div class="demo-banner">
@@ -26,7 +25,7 @@
         <nav>
             <div class="logo">
                 <div class="logo-text-container">
-                    <span class="logo-text" data-bind="businessName">Ridgeline Builders</span>
+                    <span class="logo-text" data-bind="businessName">Shaka Builder</span>
                     <span class="tagline" data-bind="mainService">EXTENSIONS &amp; RENOVATIONS</span>
                 </div>
             </div>
@@ -34,12 +33,13 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a class="trade-cta trade-cta--small" href="#contact" data-open-chat>Get a Quote</a></li>
             </ul>
         </nav>
     </header>
@@ -48,45 +48,49 @@
         <section id="home" class="trade-hero">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <span class="trade-eyebrow">Building Specialists</span>
-                    <h1>Professional building services across <span data-bind="town">West Yorkshire</span>.</h1>
-                    <p class="hero-lede">From single-storey extensions to full renovations, <span data-bind="businessName">Ridgeline Builders</span> delivers quality building work — with a website that answers your questions any time, day or night.</p>
+                    <h1>Building spaces.<br>Creating futures.</h1>
+                    <p class="hero-lede">From concept to completion, <span data-bind="businessName">Shaka Builder</span> builds with pride — with a website that answers your questions any time, day or night.</p>
                     <div class="cta-row">
-                        <button type="button" class="trade-cta" data-open-chat>Get a Free Quote</button>
-                        <button type="button" class="trade-cta trade-cta--outline" data-open-chat>Book a Callback</button>
+                        <button type="button" class="trade-cta" data-open-chat>View Our Projects</button>
+                        <button type="button" class="trade-cta trade-cta--outline" data-open-chat>Get a Quote</button>
                     </div>
                 </div>
                 <div class="trade-hero-visual">
-                    <span class="dim-label">SITE PLAN — SCALE 1:50</span>
-                    <div class="trade-badge-icon">🧱</div>
-                    <strong data-bind="businessName">Ridgeline Builders</strong>
-                    <span>Building Services in <span data-bind="town">West Yorkshire</span></span>
+                    <img src="/assets/images/demos/builder-house.jpg" alt="Modern two-storey new-build house exterior at dusk">
                 </div>
             </div>
         </section>
 
-        <section id="services">
-            <div class="section-head">
-                <h2>Our Services</h2>
-                <p>Everything you need for your next building project.</p>
-            </div>
-            <div class="services-grid" id="services-grid"></div>
+        <section id="services" class="services-strip">
+            <div class="services-grid is-strip" id="services-grid"></div>
         </section>
 
-        <section id="about">
-            <div class="trade-about">
-                <h2>About <span data-bind="businessName">Ridgeline Builders</span></h2>
-                <p>We're a local building team serving <span data-bind="town">West Yorkshire</span>, dedicated to quality workmanship and honest pricing. From extensions to full renovations, we treat every job like it's our own home.</p>
-                <p>This page is a demonstration built by Shaka Tech — showing how an AI-powered website could work for a real building business.</p>
+        <section id="about" class="quality-section">
+            <div class="quality-copy">
+                <h2>Quality. Craftsmanship. Reliability.</h2>
+                <p>We are a full-service building contractor delivering exceptional results on time and on budget.</p>
+                <ul class="checklist" id="checklist"></ul>
+            </div>
+            <div class="quality-photo">
+                <img src="/assets/images/demos/builder-kitchen.jpg" alt="Modern open-plan kitchen with island seating">
             </div>
         </section>
 
-        <section id="gallery" class="trade-gallery">
-            <div class="section-head">
-                <h2>Recent Work</h2>
+        <section id="projects" class="projects-section">
+            <div class="projects-layout">
+                <div class="projects-main">
+                    <div class="section-head">
+                        <h2>Recent Projects</h2>
+                        <p class="gallery-note">Example projects shown for demonstration purposes — not real completed jobs.</p>
+                    </div>
+                    <div class="project-thumbs" id="project-thumbs"></div>
+                </div>
+                <div class="stats-grid" id="stats-grid"></div>
             </div>
-            <p class="gallery-note">Example projects shown for demonstration purposes — not real completed jobs.</p>
-            <div class="gallery-grid" id="gallery-grid"></div>
+            <div class="projects-cta">
+                <p>Let's build something great together.</p>
+                <button type="button" class="trade-cta trade-cta--dark" data-open-chat>Get a Free Quote</button>
+            </div>
         </section>
 
         <section id="areas" class="areas-section">
@@ -96,7 +100,7 @@
             <div class="areas-chips" id="areas-chips"></div>
         </section>
 
-        <section id="reviews" class="trade-reviews">
+        <section id="testimonials" class="trade-reviews">
             <div class="section-head">
                 <h2>What Customers Say</h2>
             </div>
@@ -152,7 +156,7 @@
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">✉️ Email</span>
-                        <a href="mailto:hello@ridgelinebuilders-demo.co.uk">hello@ridgelinebuilders-demo.co.uk</a>
+                        <a href="mailto:hello@shakabuilder-demo.co.uk">hello@shakabuilder-demo.co.uk</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">📍 Location</span>
@@ -173,34 +177,39 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <span class="logo-text" data-bind="businessName">Ridgeline Builders</span>
+                <span class="logo-text" data-bind="businessName">Shaka Builder</span>
                 <span class="tagline">DEMO WEBSITE</span>
             </div>
             <p>This is a demo website built by <a href="/">Shaka Tech</a> to showcase AI-powered websites for tradespeople.</p>
         </div>
     </footer>
 
-    <script src="/assets/trades/builder.js"></script>
+    <script src="/assets/trades/builder.js?v=2"></script>
+    <script src="/assets/js/trade-icons.js?v=2"></script>
     <script src="/assets/js/trade-colors.js"></script>
     <script src="/assets/js/chatbot.js"></script>
-    <script src="/script.js"></script>
+    <script src="/script.js?v=2"></script>
     <script src="/assets/js/personalize.js"></script>
     <script>
         const trade = window.SHAKA_TRADE;
 
         document.getElementById('services-grid').innerHTML = trade.services.map((s) => `
             <div class="service-card">
-                <div class="service-icon">${s.icon}</div>
+                <div class="service-icon">${tradeIcon(s.icon)}</div>
                 <h3>${s.name}</h3>
-                <p>${s.desc}</p>
             </div>
         `).join('');
 
-        document.getElementById('gallery-grid').innerHTML = trade.gallery.map((g) => `
-            <div class="gallery-tile">
-                <div class="icon">${g.icon}</div>
-                <div class="caption">${g.caption}</div>
-            </div>
+        document.getElementById('checklist').innerHTML = trade.checklist.map((item) => `
+            <li><span class="check-icon">${tradeIcon('shieldCheck')}</span>${item}</li>
+        `).join('');
+
+        document.getElementById('project-thumbs').innerHTML = trade.projects.map((p) => `
+            <div class="project-thumb"><img src="${p.img}" alt="${p.alt}" style="object-position:${p.pos || '50% 50%'}" loading="lazy"></div>
+        `).join('');
+
+        document.getElementById('stats-grid').innerHTML = trade.stats.map((s) => `
+            <div class="stat-item"><span class="stat-number">${s.number}</span><span class="stat-label">${s.label}</span></div>
         `).join('');
 
         document.getElementById('areas-chips').innerHTML = trade.areas.map((a) => `<span class="area-chip">${a}</span>`).join('');
