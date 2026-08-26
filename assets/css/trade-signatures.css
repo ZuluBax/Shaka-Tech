@@ -193,6 +193,26 @@
     border-color: rgba(0, 87, 217, 0.15);
 }
 
+/* Trust cards are exactly 4 — the shared .services-grid's 320px-minimum
+   auto-fit columns wrap that to 3+1 at normal page widths, stranding the
+   4th card alone on its own row. Force a single row of 4 here instead. */
+.t-plumber .trust-section .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1100px;
+}
+
+@media (max-width: 900px) {
+    .t-plumber .trust-section .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .t-plumber .trust-section .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* #contact carries a bare-ID background rule in demos.css that a plain
    class can't out-specificity, so this needs the ID too (see that rule's
    own comment for the same gotcha on the main site's stylesheet). */

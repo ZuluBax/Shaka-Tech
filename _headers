@@ -27,3 +27,13 @@
 
 /favicon.ico
   Cache-Control: no-cache
+
+# The HTML pages themselves weren't covered above, so a demo page kept
+# showing a stale version (old CSS/JS query-string versions and all) for a
+# while after every redeploy, even though the assets it referenced were
+# already fresh.
+/
+  Cache-Control: no-cache
+
+/demos/*
+  Cache-Control: no-cache

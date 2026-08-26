@@ -213,6 +213,19 @@
     overflow: hidden;
 }
 
+/* A second, separate main-site collision from the one below: styles.css
+   also caps <main> itself at max-width:1600px on screens 1400px and
+   wider (centred), which quietly shrinks every section on a demo page —
+   invisible up to ~1600px viewport width, but a real gutter down both
+   sides of every full-bleed hero/photo-banner on anything wider (e.g. a
+   1920px monitor). Each section already centres its own inner content via
+   its own max-width wrapper, so <main> itself never needed capping here. */
+@media (min-width: 1400px) {
+    .trade-site main {
+        max-width: none;
+    }
+}
+
 /* The main site's own styles.css (loaded on every demo page too) has a
    broad "main section > *" rule that caps any direct child of any section
    at 1400px — including this one, quietly shrinking the full-bleed photo
