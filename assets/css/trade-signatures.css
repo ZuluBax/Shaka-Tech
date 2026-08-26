@@ -28,6 +28,23 @@
     clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
 }
 
+/* Roofer is dark by design, so its hero scrim (in demos.css) is tinted with
+   --t-bg on the assumption --t-bg is dark — true by default, but not once
+   the light/dark toggle (theme-toggle.js) switches this trade to light
+   mode. Same fix as Joiner/Landscaper/Plasterer's light-by-default scrim
+   override, just gated to the light *mode* instead of being unconditional. */
+.t-roofer[data-theme="light"] .hero-bg-photo::after {
+    background: linear-gradient(100deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.6) 45%, rgba(15, 23, 42, 0.25) 70%, transparent 100%);
+}
+
+.t-roofer[data-theme="light"] .trade-hero--photo-bg h1 {
+    color: #F8FAFC;
+}
+
+.t-roofer[data-theme="light"] .trade-hero--photo-bg .hero-lede {
+    color: rgba(248, 250, 252, 0.85);
+}
+
 /* ---------- BUILDER — warm, light "show-home" theme ---------- */
 .t-builder .trade-hero {
     background: var(--t-bg-alt);
@@ -70,6 +87,21 @@
     color: var(--t-accent);
 }
 
+/* Same reasoning as Roofer above: Electrician is dark by design, so its hero
+   scrim assumes a dark --t-bg — only relevant once the light/dark toggle
+   (theme-toggle.js) switches this trade to light mode. */
+.t-electrician[data-theme="light"] .hero-bg-photo::after {
+    background: linear-gradient(100deg, rgba(8, 10, 13, 0.85) 0%, rgba(8, 10, 13, 0.6) 45%, rgba(8, 10, 13, 0.25) 70%, transparent 100%);
+}
+
+.t-electrician[data-theme="light"] .trade-hero--photo-bg h1 {
+    color: #F5F7F8;
+}
+
+.t-electrician[data-theme="light"] .trade-hero--photo-bg .hero-lede {
+    color: rgba(245, 247, 248, 0.85);
+}
+
 .t-electrician #services {
     background: var(--t-bg);
 }
@@ -88,9 +120,22 @@
 }
 
 /* Dark Slate — the one panel on the page that isn't near-black or charcoal,
-   giving Smart Electrical its own distinct "control panel" feel. */
+   giving Smart Electrical its own distinct "control panel" feel. Its ink is
+   fixed light (not var(--t-muted)/var(--t-text)) because the panel's own
+   background is a fixed dark tone regardless of mode — those variables
+   correctly follow the page's overall light/dark toggle (theme-toggle.js),
+   but this one panel doesn't, so borrowing them would make the text
+   invisible here whenever the rest of the page goes light. */
 .t-electrician #smart {
     background: #1C232B;
+}
+
+.t-electrician #smart .quality-copy h2 {
+    color: #F5F7F8;
+}
+
+.t-electrician #smart .quality-copy > p {
+    color: rgba(245, 247, 248, 0.75);
 }
 
 .t-electrician #smart .checklist li {
@@ -98,7 +143,7 @@
     font-family: var(--t-body-font);
     font-size: 0.95rem;
     line-height: 1.7;
-    color: var(--t-muted);
+    color: rgba(245, 247, 248, 0.75);
 }
 
 .t-electrician #smart .checklist li strong {
@@ -106,7 +151,7 @@
     font-family: var(--t-heading-font);
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--t-text);
+    color: #F5F7F8;
 }
 
 .t-electrician #smart .check-icon {
@@ -188,9 +233,27 @@
     background: #EAF4FF;
 }
 
+/* Fixed dark ink, not the default var(--t-text) — this section's own
+   background stays a fixed light blue in both light and dark mode (see
+   theme-toggle.js), so its heading needs to stay dark regardless of what
+   the rest of the page is doing; var(--t-text) would turn light (and
+   disappear against this light section) once the page switches to dark. */
+.t-plumber .trust-section .section-head h2 {
+    color: #0B2345;
+}
+
 .t-plumber .trust-section .service-card {
     background: #D6E9FF;
     border-color: rgba(0, 87, 217, 0.15);
+}
+
+/* Fixed dark ink, not var(--t-muted) — these cards keep their light-blue
+   background in both light and dark mode (see theme-toggle.js), so their
+   text needs to stay dark regardless of what the rest of the page is
+   doing; var(--t-muted) would turn light (and disappear) once the page
+   itself switches to dark mode. */
+.t-plumber .trust-section .service-card p {
+    color: rgba(18, 59, 120, 0.75);
 }
 
 /* Trust cards are exactly 4 — the shared .services-grid's 320px-minimum
@@ -724,6 +787,15 @@
 
 .t-dog-walker #services .service-card:nth-child(3n+3) {
     background: color-mix(in srgb, #A8B89F 18%, #FFFFFF);
+}
+
+/* Fixed dark ink, not var(--t-muted) — these three card colours stay fixed
+   and light in both light and dark mode (see theme-toggle.js), so their
+   description text needs to stay dark regardless of what the rest of the
+   page is doing; var(--t-muted) would turn light (and disappear against
+   these light cards) once the page itself switches to dark mode. */
+.t-dog-walker #services .service-card p {
+    color: rgba(41, 40, 39, 0.75);
 }
 
 .t-dog-walker .why-section,

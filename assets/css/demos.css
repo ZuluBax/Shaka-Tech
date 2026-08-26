@@ -82,6 +82,41 @@
     background: var(--t-text);
 }
 
+/* Light/dark mode toggle (injected into .nav-links by theme-toggle.js).
+   Sits inline with the other nav items so it lands in the same mobile
+   dropdown as everything else, with no extra layout work needed. */
+.trade-site .theme-toggle-item {
+    display: flex;
+    align-items: center;
+}
+
+.trade-site .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--t-border);
+    background: transparent;
+    color: var(--t-header-text, var(--t-text));
+    font-size: 1.05rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.trade-site .theme-toggle:hover {
+    background: var(--t-border-soft);
+    transform: translateY(-2px);
+}
+
+.trade-site .theme-toggle:focus-visible {
+    outline: 2px solid var(--t-accent);
+    outline-offset: 2px;
+}
+
 .trade-hero {
     text-align: left;
     padding: 6rem 2rem;
@@ -540,17 +575,21 @@
 
 /* Featured-services photo strip: a light band breaking up the otherwise
    all-dark trade-site theme so the work photos read clearly, sitting
-   between the hero and the rest of the dark page. Reuses --t-bg (the
-   trade's own dark tone) as the ink/caption color here since it's already
-   the exact navy this band needs on a light background. */
+   between the hero and the rest of the dark page. The band's background is
+   a fixed light tone regardless of light/dark mode, so its ink/caption
+   colour is fixed dark too — it used to reuse --t-bg for this (a shortcut
+   that only worked back when every trade using this component was
+   dark-by-default, so --t-bg always happened to be a usable dark ink); the
+   light/dark toggle (theme-toggle.js) can now make --t-bg light too, which
+   would make this text disappear against the same light band. */
 .trade-site #services.featured-services {
     background: #F3F5F8;
-    color: var(--t-bg);
+    color: #11151A;
     padding: 4.5rem 2rem;
 }
 
 .trade-site .featured-services .section-head h2 {
-    color: var(--t-bg);
+    color: #11151A;
     display: flex;
     align-items: center;
     gap: 1.5rem;
