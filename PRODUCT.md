@@ -24,11 +24,11 @@ Static site, no framework, no build step (plain HTML/CSS/JS), hosted on Cloudfla
 
 ## Capabilities and Constraints
 
-- **Contact form is not yet wired up.** `#contact-form` (in `script.js`) currently only logs to console and shows a browser alert — it does not send anywhere. Confirmed next step: connect it to the business's Google Workspace email account. Until that's built, no real enquiry submitted through the live contact form actually reaches anyone.
+- **Contact forms are wired up on every page.** `#contact-form` (in `script.js`) submits to Web3Forms, which delivers to `hello@shakatech.co.uk`. The homepage and all 8 trade demo pages share the same Web3Forms access key so every submission — whichever page it came from — reaches that one inbox; the demo pages tag their `subject`/`from_name` fields with the trade name so incoming enquiries are identifiable at a glance.
 - **Trade demo chatbots are simulated, not real.** The AI conversation, calendar booking confirmation, and SMS confirmation shown in each trade demo are a simulated experience only — no real messages are sent and no real appointments are created. This must stay clearly labeled as a demo in the UI; it should never be presented as though it performs a real booking.
 - No backend or database — the entire site is static.
-- The trade demo businesses (e.g. "Apex Roofing") are explicitly fictional and must stay identifiable as demo content, not real Shaka Tech customers.
-- The current `schema.org` structured data on `index.html` includes a phone number (`07700900123`) that has the shape of placeholder content — it has not been confirmed as Shaka Tech's real business number and should not be treated as verified contact evidence until confirmed.
+- The trade demo businesses (e.g. "Shaka Roofer") are explicitly fictional and must stay identifiable as demo content, not real Shaka Tech customers.
+- Every demo page's "Get In Touch" section and the homepage's `schema.org` structured data now point to Shaka Tech's real contact details (WhatsApp 07518 711632, hello@shakatech.co.uk) rather than a per-trade placeholder, so an enquiry from any demo actually reaches the business.
 
 ## Brand Commitments
 

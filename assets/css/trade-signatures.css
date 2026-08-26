@@ -37,47 +37,101 @@
     color: #fff;
 }
 
-/* ---------- ELECTRICIAN — circuit trace ---------- */
-.t-electrician .circuit-trace {
-    width: 100%;
-    height: 48px;
+/* Hero, services strip and the quality section all share the same warm
+   cream background by design — without a gap between them they read as
+   one undifferentiated block, so space them into 3 distinct boxes instead
+   of changing the colour. */
+.t-builder .services-strip,
+.t-builder .quality-section {
+    margin-top: 2.5rem;
+}
+
+/* ---------- ELECTRICIAN — "Premium Industrial Tech" ---------- */
+/* Yellow only ever accents this page — the hero photo, service cards and
+   panels stay in the near-black/charcoal/slate tiers from the brand brief
+   so the accent keeps its punch instead of the page reading as "yellow". */
+.t-electrician .trade-hero h1 {
+    text-transform: uppercase;
+}
+
+.t-electrician .trade-hero--photo-bg {
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 760px) {
+    .t-electrician .trade-hero--photo-bg {
+        min-height: 520px;
+    }
+}
+
+.t-electrician .accent-text {
+    color: var(--t-accent);
+}
+
+.t-electrician #services {
+    background: var(--t-bg);
+}
+
+.t-electrician .service-card {
+    background: var(--t-bg-alt);
+    border-color: rgba(250, 204, 21, 0.18);
+}
+
+.t-electrician #why {
+    background: var(--t-bg-alt);
+}
+
+.t-electrician #why .trust-grid {
+    margin-top: 3rem;
+}
+
+/* Dark Slate — the one panel on the page that isn't near-black or charcoal,
+   giving Smart Electrical its own distinct "control panel" feel. */
+.t-electrician #smart {
+    background: #1C232B;
+}
+
+.t-electrician #smart .checklist li {
+    align-items: flex-start;
+    font-family: var(--t-body-font);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--t-muted);
+}
+
+.t-electrician #smart .checklist li strong {
     display: block;
-    margin-top: 1.5rem;
+    font-family: var(--t-heading-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--t-text);
 }
 
-.t-electrician .circuit-trace path {
-    fill: none;
-    stroke: var(--t-accent);
-    stroke-width: 2;
-    opacity: 0.7;
+.t-electrician #smart .check-icon {
+    margin-top: 0.2rem;
 }
 
-.t-electrician .circuit-trace circle {
-    fill: var(--t-accent);
+.t-electrician .trade-final-cta {
+    background: linear-gradient(135deg, var(--t-accent), var(--t-accent-2));
 }
 
-.t-electrician .trade-hero-visual .trade-badge-icon {
-    filter: drop-shadow(0 0 12px var(--t-accent));
+.t-electrician .trade-final-cta h2,
+.t-electrician .trade-final-cta p {
+    color: #080A0D;
 }
 
-/* ---------- PLUMBER — flowing pipe divider ---------- */
-.t-plumber .pipe-divider {
-    display: block;
-    width: 100%;
-    height: 60px;
+/* ---------- PLUMBER — clean, trustworthy "Shaka Blue" ---------- */
+/* White/light-grey carries most of the page by design, with blue as an
+   accent and two dark-navy break sections (Emergency, Get a Quote) for
+   contrast — see the brand brief's 60/20/15/5 colour balance. */
+.t-plumber .accent-text {
+    color: var(--t-accent);
 }
 
-.t-plumber .pipe-divider path {
-    fill: none;
-    stroke: var(--t-accent);
-    stroke-width: 3;
-    opacity: 0.5;
-}
-
-.t-plumber .pipe-divider circle {
-    fill: var(--t-bg-alt);
-    stroke: var(--t-accent);
-    stroke-width: 2;
+.t-plumber .hero-content .checklist {
+    margin: 1.5rem 0;
 }
 
 .t-plumber .service-card,
@@ -85,115 +139,688 @@
     border-radius: calc(var(--t-radius) * 1.4) calc(var(--t-radius) * 0.4) calc(var(--t-radius) * 1.4) calc(var(--t-radius) * 0.4);
 }
 
-/* ---------- JOINER — dovetail joint seam ---------- */
-.t-joiner .joint-divider {
-    height: 22px;
-    width: 100%;
-    background-image:
-        linear-gradient(135deg, var(--t-bg-alt) 25%, transparent 25%),
-        linear-gradient(225deg, var(--t-bg-alt) 25%, transparent 25%);
-    background-position: 0 0;
-    background-size: 26px 22px;
-    background-color: var(--t-bg);
+/* Services bar: a solid-blue strip of icons directly under the hero, per
+   the brief's "strong visual divider" — service-card's default accent-blue
+   text would vanish on this background, so it's flipped to white here. */
+.t-plumber .services-strip {
+    background: var(--t-accent);
 }
 
-.t-joiner .service-card {
-    background-image: repeating-linear-gradient(
-        180deg,
-        var(--t-border-soft) 0px,
-        transparent 1px,
-        transparent 5px
-    );
-    background-color: var(--t-bg);
+.t-plumber .services-strip .service-icon svg {
+    color: #fff;
 }
 
-.t-joiner .trade-hero-visual .trade-badge-icon {
-    transform: rotate(-8deg);
+.t-plumber .services-strip .service-card h3 {
+    color: #fff;
 }
 
-/* ---------- LANDSCAPER — organic wave + soft form ---------- */
-.t-landscaper .wave-divider {
-    display: block;
-    width: 100%;
-    height: 44px;
+/* Emergency and Get a Quote are the page's two dark-navy "break" sections —
+   a deliberate third tone (not --t-bg or --t-bg-alt) reserved for moments
+   that need to visually interrupt the otherwise white/light-blue page. */
+.t-plumber .emergency-cta {
+    background: #0B2345;
+    text-align: center;
 }
 
-.t-landscaper .wave-divider path {
-    fill: none;
-    stroke: var(--t-accent);
-    stroke-width: 2.5;
-    opacity: 0.55;
+.t-plumber .emergency-cta h2 {
+    color: #fff;
 }
 
-.t-landscaper .trade-hero-visual {
-    border-radius: 62% 38% 55% 45% / 48% 45% 55% 52%;
-}
-
-.t-landscaper .service-card:hover {
-    border-radius: 34% 66% 62% 38% / 42% 38% 62% 58%;
-}
-
-/* ---------- PLASTERER — quiet restraint, one swipe ---------- */
-.t-plasterer .trade-hero {
-    position: relative;
-    overflow: hidden;
-}
-
-.t-plasterer .trade-hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -10%;
-    width: 55%;
-    height: 100%;
-    background: linear-gradient(100deg, transparent 0%, var(--t-border) 45%, transparent 70%);
-    pointer-events: none;
-}
-
-.t-plasterer .service-card,
-.t-plasterer .trade-hero-visual,
-.t-plasterer .review-card,
-.t-plasterer .faq-item,
-.t-plasterer .gallery-tile {
-    border: none;
-    box-shadow: 0 1px 0 var(--t-border) inset;
-}
-
-.t-plasterer .trade-cta--outline {
-    border-width: 1px;
-}
-
-/* ---------- DOG WALKER — paw trail ---------- */
-.t-dog-walker .paw-trail {
+.t-plumber .emergency-actions {
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    gap: 1.5rem 2.5rem;
-    padding: 1.8rem 1rem;
-    font-size: 2.2rem;
-    opacity: 0.9;
+    margin-top: 1.5rem;
 }
 
-@media (max-width: 480px) {
-    .t-dog-walker .paw-trail {
-        gap: 1rem 1.4rem;
-        font-size: 1.6rem;
+.t-plumber .emergency-label {
+    font-family: var(--t-heading-font);
+    color: var(--t-accent-2);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.t-plumber .trust-section {
+    background: #EAF4FF;
+}
+
+.t-plumber .trust-section .service-card {
+    background: #D6E9FF;
+    border-color: rgba(0, 87, 217, 0.15);
+}
+
+/* #contact carries a bare-ID background rule in demos.css that a plain
+   class can't out-specificity, so this needs the ID too (see that rule's
+   own comment for the same gotcha on the main site's stylesheet). */
+.t-plumber #contact.quote-section {
+    background: #0B2345;
+}
+
+.t-plumber .quote-section .section-head h2 {
+    color: #fff;
+}
+
+.t-plumber #contact.quote-section .contact-item a {
+    color: #fff;
+    text-decoration-color: var(--t-accent-2);
+}
+
+.t-plumber #contact.quote-section .contact-item span:not(.contact-label) {
+    color: #fff;
+}
+
+.t-plumber .quote-section .section-head p,
+.t-plumber .quote-section .contact-label {
+    color: var(--t-accent-2);
+}
+
+.t-plumber footer {
+    background: #0B2345;
+}
+
+.t-plumber footer .footer-logo .logo-text,
+.t-plumber footer p,
+.t-plumber footer a {
+    color: #fff;
+}
+
+.t-plumber footer .footer-logo .tagline {
+    color: var(--t-accent-2);
+}
+
+/* ---------- JOINER — "Premium Bespoke Craftsmanship" ---------- */
+/* Three-font system per the brand brief: Playfair Display for headings
+   (already --t-heading-font), Lora for body (--t-body-font), and Inter
+   specifically for interface chrome — nav, buttons, forms, labels — so
+   the site reads as edited/designed rather than just "a serif site". */
+.t-joiner header .logo-text,
+.t-joiner header .nav-links a,
+.t-joiner .trade-cta,
+.t-joiner .personalize-form label,
+.t-joiner .contact-label,
+.t-joiner .footer-logo .logo-text,
+.t-joiner .footer-logo .tagline,
+.t-joiner .area-chip,
+.t-joiner .service-card-link,
+.t-joiner .demo-tag-corner {
+    font-family: 'Inter', sans-serif;
+}
+
+.t-joiner .accent-text {
+    color: var(--t-accent);
+}
+
+.t-joiner .trade-hero--photo-bg {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 760px) {
+    .t-joiner .trade-hero--photo-bg {
+        min-height: 480px;
     }
 }
 
-.t-dog-walker .paw-trail span:nth-child(odd) {
-    transform: translateY(-6px) rotate(-8deg);
+/* The shared hero scrim gradient is tinted with --t-bg, which assumes a
+   dark trade theme (true everywhere else) — for joiner's light Warm Cream
+   --t-bg that scrim goes light instead of dark, washing the photo out
+   rather than darkening it. Force it to a fixed dark tint here instead. */
+.t-joiner .hero-bg-photo::after {
+    background: linear-gradient(100deg, rgba(36, 26, 23, 0.92) 0%, rgba(36, 26, 23, 0.78) 42%, rgba(36, 26, 23, 0.4) 68%, transparent 100%);
 }
 
-.t-dog-walker .paw-trail span:nth-child(even) {
-    transform: translateY(4px) rotate(8deg);
+/* The hero's own theme colours (Deep Walnut text, Warm Grey muted) are
+   tuned for the light Warm Cream page, not for sitting on a dark photo —
+   without this override the hero copy would be nearly invisible against
+   its own background image. */
+.t-joiner .trade-hero--photo-bg h1,
+.t-joiner .trade-hero--photo-bg .trade-eyebrow {
+    color: #FAF7F2;
 }
 
-.t-dog-walker .trade-hero-visual {
-    border-radius: 50%;
-    aspect-ratio: 1;
+.t-joiner .trade-hero--photo-bg .accent-text {
+    color: #D2B48C;
+}
+
+.t-joiner .trade-hero--photo-bg .hero-lede {
+    color: rgba(250, 247, 242, 0.8);
+}
+
+/* Services bar: a dark walnut strip breaking up the cream page, per the
+   brief's "easy way to jump to what you're interested in" band. */
+.t-joiner .services-strip {
+    background: #3B2F2F;
+    margin-top: 2rem;
+}
+
+.t-joiner .services-strip .service-icon svg {
+    color: #D2B48C;
+}
+
+.t-joiner .services-strip .service-card h3 {
+    color: #FAF7F2;
+}
+
+/* #about carries the generic quality-section rule (see demos.css), which
+   defaults it to --t-bg-alt (Soft Ivory) — the brief wants this specific
+   section on Warm Cream instead. */
+.t-joiner #about.quality-section {
+    background: var(--t-bg);
+}
+
+.t-joiner .process-section {
+    background: #241A17;
+}
+
+.t-joiner .process-section .section-head h2,
+.t-joiner .process-section .process-step h3 {
+    color: #FAF7F2;
+}
+
+.t-joiner .process-section .process-step p {
+    color: rgba(250, 247, 242, 0.65);
+}
+
+.t-joiner .trade-reviews {
+    background: var(--t-bg-alt);
+}
+
+.t-joiner footer {
+    background: #241A17;
+}
+
+.t-joiner footer .footer-logo .logo-text,
+.t-joiner footer p,
+.t-joiner footer a {
+    color: #FAF7F2;
+}
+
+.t-joiner footer .footer-logo .tagline {
+    color: var(--t-accent-2);
+}
+
+/* ---------- LANDSCAPER — "Modern Garden Studio" ---------- */
+.t-landscaper .accent-text {
+    color: var(--t-accent);
+}
+
+.t-landscaper .trade-hero--photo-bg {
+    min-height: 600px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+@media (max-width: 760px) {
+    .t-landscaper .trade-hero--photo-bg {
+        min-height: 480px;
+    }
+}
+
+/* Same fix as Joiner: the shared hero scrim is tinted with --t-bg, which
+   assumes a dark trade theme — landscaper's --t-bg is light Garden Cream,
+   so without this override the scrim washes the photo out instead of
+   darkening it behind the white hero text. */
+.t-landscaper .hero-bg-photo::after {
+    background: linear-gradient(100deg, rgba(20, 30, 22, 0.85) 0%, rgba(20, 30, 22, 0.6) 45%, rgba(20, 30, 22, 0.25) 70%, transparent 100%);
+}
+
+.t-landscaper .trade-hero--photo-bg h1,
+.t-landscaper .trade-hero--photo-bg .trade-eyebrow {
+    color: #FAFCF7;
+}
+
+.t-landscaper .trade-hero--photo-bg .hero-lede {
+    color: rgba(250, 252, 247, 0.85);
+}
+
+/* The floating services card overlaps the hero photo, so it needs its own
+   shadow/contrast rather than blending into the light --t-bg page below. */
+.t-landscaper .services-float {
+    background: var(--t-bg-alt);
+}
+
+.t-landscaper .services-float .service-icon svg {
+    color: var(--t-accent);
+}
+
+.t-landscaper .photo-statement-panel {
+    background: var(--t-bg);
+}
+
+.t-landscaper .services-list-item:hover {
+    background: var(--t-bg);
+}
+
+/* One deliberately dark "break" section — Deep Forest Green, distinct from
+   both --t-bg (Garden Cream) and --t-bg-alt (white) — used only here so the
+   before/after panels get real contrast instead of blending into the page. */
+.t-landscaper .transformation-section {
+    background: #14532D;
+}
+
+.t-landscaper .transformation-section .section-head h2 {
+    color: #FAFCF7;
+}
+
+.t-landscaper .transformation-section .section-head p {
+    color: rgba(250, 252, 247, 0.7);
+}
+
+.t-landscaper .before-after-panel--before {
+    background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 2px, transparent 2px, transparent 12px), rgba(255, 255, 255, 0.04);
+}
+
+.t-landscaper .before-after-panel--before .before-after-label {
+    color: rgba(250, 252, 247, 0.55);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.t-landscaper .why-section {
+    background: var(--t-bg-alt);
+}
+
+/* Why Choose Us has exactly 4 cards — the shared .services-grid's
+   320px-minimum auto-fit columns wrap that to 3+1 at normal page widths,
+   so force a single row of 4 here specifically. */
+.t-landscaper .why-section .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1100px;
+}
+
+@media (max-width: 900px) {
+    .t-landscaper .why-section .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .t-landscaper .why-section .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cormorant Garamond is reserved for the review pull-quote only, per the
+   brand brief's three-font system — everywhere else stays Raleway/Nunito. */
+.t-landscaper .pull-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+}
+
+.t-landscaper footer {
+    background: #1F2921;
+}
+
+.t-landscaper footer .footer-logo .logo-text,
+.t-landscaper footer p,
+.t-landscaper footer a {
+    color: #FAFCF7;
+}
+
+.t-landscaper footer .footer-logo .tagline {
+    color: var(--t-accent-2);
+}
+
+/* ---------- PLASTERER — "Smooth Finishes, Perfect Results" ---------- */
+/* DM Sans is reserved for UI chrome per the brand brief (Poppins headings,
+   Roboto body, DM Sans for nav/buttons/labels) — same three-font pattern
+   as Joiner's Inter, Landscaper's Cormorant. */
+.t-plasterer header .logo-text,
+.t-plasterer header .nav-links a,
+.t-plasterer .trade-cta,
+.t-plasterer .personalize-form label,
+.t-plasterer .contact-label,
+.t-plasterer .footer-logo .logo-text,
+.t-plasterer .footer-logo .tagline,
+.t-plasterer .area-chip,
+.t-plasterer .service-card-link,
+.t-plasterer .services-list-name,
+.t-plasterer .demo-tag-corner {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.t-plasterer .accent-text {
+    color: var(--t-accent);
+}
+
+.t-plasterer .trade-hero--photo-bg {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 760px) {
+    .t-plasterer .trade-hero--photo-bg {
+        min-height: 480px;
+    }
+}
+
+/* Same fix as Joiner/Landscaper: the shared hero scrim is tinted with
+   --t-bg, which assumes a dark trade theme — Plaster White is light, so
+   without this override the scrim washes the photo out instead of
+   darkening it behind the white hero text. */
+.t-plasterer .hero-bg-photo::after {
+    background: linear-gradient(100deg, rgba(23, 26, 25, 0.88) 0%, rgba(23, 26, 25, 0.65) 45%, rgba(23, 26, 25, 0.25) 70%, transparent 100%);
+}
+
+.t-plasterer .trade-hero--photo-bg h1,
+.t-plasterer .trade-hero--photo-bg .trade-eyebrow {
+    color: #F8F7F4;
+}
+
+.t-plasterer .trade-hero--photo-bg .hero-lede {
+    color: rgba(248, 247, 244, 0.82);
+}
+
+/* Services bar: a dark Charcoal strip breaking up the light page, per the
+   brief's "easy way to jump to what you're interested in" band. */
+.t-plasterer .services-strip {
+    background: #252827;
+}
+
+.t-plasterer .services-strip .service-icon svg {
+    color: var(--t-accent);
+}
+
+.t-plasterer .services-strip .service-card h3 {
+    color: #F8F7F4;
+}
+
+.t-plasterer .why-section {
+    background: var(--t-bg-alt);
+}
+
+/* Why Choose has exactly 4 cards — the shared .services-grid's 320px-min
+   auto-fit columns wrap that to 3+1 at normal page widths, so force a
+   single row of 4 here specifically. */
+.t-plasterer .why-section .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1100px;
+}
+
+@media (max-width: 900px) {
+    .t-plasterer .why-section .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .t-plasterer .why-section .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.t-plasterer .pull-quote {
+    color: var(--t-text);
+}
+
+.t-plasterer .trade-reviews {
+    background: var(--t-bg-alt);
+}
+
+.t-plasterer footer {
+    background: #171A19;
+}
+
+.t-plasterer footer .footer-logo .logo-text,
+.t-plasterer footer p,
+.t-plasterer footer a {
+    color: #F8F7F4;
+}
+
+.t-plasterer footer .footer-logo .tagline {
+    color: var(--t-accent);
+}
+
+/* ---------- DOG WALKER — "Warm, Friendly, Premium" ---------- */
+/* Quicksand is reserved for small, playful labels only per the brand brief
+   (Baloo 2 headings, DM Sans everywhere else) — used far more sparingly
+   than Joiner's Inter or Plasterer's DM Sans UI treatment. */
+.t-dog-walker .trade-eyebrow,
+.t-dog-walker .area-chip,
+.t-dog-walker .demo-tag-corner,
+.t-dog-walker .hero-float-badge span,
+.t-dog-walker .masonry-overlay span {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.t-dog-walker .accent-text {
+    color: var(--t-accent);
+}
+
+/* Rounded, pill-shaped buttons per the brief's "keep it rounded and
+   friendly" direction — every other trade uses --t-radius on its buttons. */
+.t-dog-walker .trade-cta {
+    border-radius: 999px;
+}
+
+.t-dog-walker .trade-hero--photo-bg {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 760px) {
+    .t-dog-walker .trade-hero--photo-bg {
+        min-height: 520px;
+    }
+}
+
+/* This hero photo already has a branded poster baked into its left side,
+   so the scrim + copy are mirrored to the right instead of the usual left
+   — putting our real heading over plain wall instead of on top of the
+   poster's own "Happy Pets, Happy Life" text. */
+.t-dog-walker .hero-bg-photo::after {
+    background: linear-gradient(260deg, rgba(41, 40, 39, 0.85) 0%, rgba(41, 40, 39, 0.62) 35%, rgba(41, 40, 39, 0.2) 65%, transparent 100%);
+}
+
+.t-dog-walker #home .hero-content {
+    margin-left: auto;
+    text-align: right;
+    max-width: 600px;
+}
+
+.t-dog-walker #home .hero-lede {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.t-dog-walker #home .cta-row {
+    justify-content: flex-end;
+}
+
+.t-dog-walker .trade-hero--photo-bg h1,
+.t-dog-walker .trade-hero--photo-bg .trade-eyebrow {
+    color: #FAF7F2;
+}
+
+.t-dog-walker .trade-hero--photo-bg .hero-lede {
+    color: rgba(250, 247, 242, 0.85);
+}
+
+@media (max-width: 760px) {
+    .t-dog-walker #home .hero-content {
+        margin-left: 0;
+        text-align: left;
+        max-width: none;
+    }
+
+    .t-dog-walker #home .hero-lede {
+        margin-right: auto;
+    }
+
+    .t-dog-walker #home .cta-row {
+        justify-content: flex-start;
+    }
+
+    .t-dog-walker .hero-float-badge {
+        display: none;
+    }
+}
+
+/* Five rounded service cards in Rose / Sage / Cream, cycling every three
+   cards, instead of the usual dark services-strip band. */
+.t-dog-walker #services .services-grid {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1300px;
+}
+
+@media (max-width: 1000px) {
+    .t-dog-walker #services .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .t-dog-walker #services .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.t-dog-walker #services .service-card {
+    border: none;
+    text-align: center;
+}
+
+.t-dog-walker #services .service-icon {
+    margin: 0 auto 1rem;
+}
+
+.t-dog-walker #services .service-card:nth-child(3n+1) {
+    background: #FBE8ED;
+}
+
+.t-dog-walker #services .service-card:nth-child(3n+2) {
+    background: #FFFFFF;
+}
+
+.t-dog-walker #services .service-card:nth-child(3n+2) .service-icon svg {
+    color: #A8B89F;
+}
+
+.t-dog-walker #services .service-card:nth-child(3n+3) {
+    background: color-mix(in srgb, #A8B89F 18%, #FFFFFF);
+}
+
+.t-dog-walker .why-section,
+.t-dog-walker #trust {
+    background: var(--t-bg-alt);
+}
+
+/* "Meet the Dogs" masonry cards get extra rounding and a softer shadow
+   than the sharper Plasterer/Landscaper galleries, to match the friendlier
+   brand. */
+.t-dog-walker #dogs .masonry-item {
+    border-radius: calc(var(--t-radius) * 1.3);
+    box-shadow: 0 8px 24px rgba(41, 40, 39, 0.1);
+}
+
+/* Exactly 4 dog profiles — one even row instead of the varied-span
+   masonry look used by the work/gallery sections. */
+.t-dog-walker #dogs-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 230px;
+}
+
+@media (max-width: 900px) {
+    .t-dog-walker #dogs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .t-dog-walker #dogs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Five gallery photos — one even row instead of a varied-span masonry
+   layout, so nothing is left as an odd tile on its own line. */
+.t-dog-walker #work-grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 200px;
+}
+
+@media (max-width: 1100px) {
+    .t-dog-walker #work-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 220px;
+    }
+}
+
+@media (max-width: 700px) {
+    .t-dog-walker #work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .t-dog-walker #work-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sage-green "Our Approach" band — the one deliberately dark-toned section
+   on an otherwise light, cream page. */
+.t-dog-walker .process-section {
+    background: #527052;
+}
+
+.t-dog-walker .process-section .section-head h2 {
+    color: #FAF7F2;
+}
+
+.t-dog-walker .process-step h3,
+.t-dog-walker .process-step .process-num {
+    color: #FAF7F2;
+}
+
+.t-dog-walker .process-step p {
+    color: rgba(250, 247, 242, 0.75);
+}
+
+.t-dog-walker .process-step::before {
+    background: rgba(250, 247, 242, 0.3);
+}
+
+.t-dog-walker .trade-reviews {
+    background: var(--t-bg-alt);
+}
+
+.t-dog-walker .booking-panel .contact-item a,
+.t-dog-walker .booking-panel .contact-label {
+    color: var(--t-accent);
+}
+
+.t-dog-walker .trade-final-cta {
+    background: var(--t-accent);
+}
+
+.t-dog-walker .trade-final-cta h2,
+.t-dog-walker .trade-final-cta p {
+    color: #FAF7F2;
+}
+
+.t-dog-walker .trade-final-cta .trade-cta {
+    background: #FAF7F2;
+    color: var(--t-accent);
+}
+
+.t-dog-walker footer {
+    background: #292827;
+}
+
+.t-dog-walker footer .footer-logo .logo-text,
+.t-dog-walker footer p,
+.t-dog-walker footer a {
+    color: #FAF7F2;
+}
+
+.t-dog-walker footer .footer-logo .tagline {
+    color: var(--t-accent-2);
 }

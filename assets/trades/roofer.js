@@ -26,7 +26,7 @@ window.SHAKA_TRADE = {
     },
 
     chatbot: {
-        persona: 'Apex Roofing Assistant',
+        persona: 'Shaka Roofer Assistant',
         avatar: '🏠',
         greeting: "👋 Hi! I'm the AI assistant for {business}. How can I help?",
         quickOptions: ['Get a quote', 'Book a callback', 'Ask a question', 'Emergency repair'],

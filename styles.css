@@ -805,14 +805,15 @@ h2 {
 }
 
 .contact-item a {
-    color: var(--light-gray);
-    text-decoration: none;
+    color: var(--cyan);
+    text-decoration: underline;
+    text-underline-offset: 3px;
     font-size: 1.1rem;
     transition: color 0.3s;
 }
 
 .contact-item a:hover {
-    color: var(--cyan);
+    color: var(--light-gray);
 }
 
 .contact-item span:not(.contact-label) {

@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css?v=2">
     <link rel="stylesheet" href="/assets/css/chatbot.css">
-    <link rel="stylesheet" href="/assets/css/demos.css?v=5">
-    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=4">
+    <link rel="stylesheet" href="/assets/css/demos.css?v=13">
+    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=15">
 </head>
 <body class="trade-site t-electrician">
     <div class="demo-banner">
@@ -36,70 +36,73 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#work">Our Work</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a class="trade-cta trade-cta--small" href="#contact" data-open-chat>Request a Quote</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="trade-hero">
+        <section id="home" class="trade-hero trade-hero--photo-bg">
+            <div class="hero-bg-photo">
+                <img src="/assets/images/demos/electrician-hero.jpg" alt="A branded Shaka Electrician van parked outside a modern house lit up at dusk" loading="eager">
+            </div>
             <div class="hero-grid">
                 <div class="hero-content">
-                    <span class="trade-eyebrow">Electrical Specialists</span>
-                    <h1>Trusted electrical services across <span data-bind="town">West Yorkshire</span>.</h1>
-                    <p class="hero-lede">From rewires to EV chargers, <span data-bind="businessName">Shaka Electrician</span> keeps your home safe and powered — with a website that answers your questions any time, day or night.</p>
+                    <h1>POWERING YOUR<br><span class="accent-text">WORLD SAFELY.</span></h1>
+                    <p class="hero-lede">Professional electrical services you can rely on — with a website that answers your questions any time, day or night.</p>
                     <div class="cta-row">
-                        <button type="button" class="trade-cta" data-open-chat>Get a Free Quote</button>
-                        <button type="button" class="trade-cta trade-cta--outline" data-open-chat>Book a Callback</button>
+                        <button type="button" class="trade-cta" data-open-chat>Request a Quote</button>
+                        <a href="#services" class="trade-cta trade-cta--outline">Our Services</a>
                     </div>
-                    <svg class="circuit-trace" viewBox="0 0 400 48" preserveAspectRatio="none" aria-hidden="true">
-                        <path d="M0 24 H80 V8 H160 V40 H260 V24 H400" />
-                        <circle cx="80" cy="24" r="4" />
-                        <circle cx="160" cy="8" r="4" />
-                        <circle cx="260" cy="40" r="4" />
-                        <circle cx="340" cy="24" r="4" />
-                    </svg>
-                </div>
-                <div class="trade-hero-visual">
-                    <div class="trade-badge-icon">⚡</div>
-                    <strong data-bind="businessName">Shaka Electrician</strong>
-                    <span>Electrical Services in <span data-bind="town">West Yorkshire</span></span>
                 </div>
             </div>
         </section>
 
         <section id="services">
             <div class="section-head">
-                <h2>Our Services</h2>
+                <h2>SAFE. RELIABLE. PROFESSIONAL.</h2>
                 <p>Everything you need for a safe, modern electrical system.</p>
             </div>
             <div class="services-grid" id="services-grid"></div>
         </section>
 
-        <section id="about">
-            <div class="trade-about">
-                <h2>About <span data-bind="businessName">Shaka Electrician</span></h2>
-                <p>We're a local electrical team serving <span data-bind="town">West Yorkshire</span>, dedicated to safe, certified work and honest pricing. From a single socket to a full rewire, we treat every job like it's our own home.</p>
-                <p>This page is a demonstration built by Shaka Tech — showing how an AI-powered website could work for a real electrical business.</p>
+        <section id="why" class="quality-section">
+            <div class="quality-grid">
+                <div class="quality-copy">
+                    <h2>Why Choose <span data-bind="businessName">Shaka Electrician</span></h2>
+                    <p>We're a local electrical team serving <span data-bind="town">West Yorkshire</span>, dedicated to safe, certified work and honest pricing. From a single socket to a full rewire, we treat every job like it's our own home.</p>
+                    <p>This page is a demonstration built by Shaka Tech — showing how an AI-powered website could work for a real electrical business.</p>
+                </div>
+                <div class="quality-photo">
+                    <img src="/assets/images/demos/electrician-consumer-unit.jpg" alt="An electrician working carefully on a consumer unit" style="object-position:50% 30%">
+                </div>
             </div>
+            <div class="trust-grid" id="trust-grid"></div>
         </section>
 
-        <section id="gallery" class="trade-gallery">
+        <section id="work" class="trade-gallery">
             <div class="section-head">
-                <h2>Recent Work</h2>
+                <h2>OUR WORK</h2>
             </div>
             <p class="gallery-note">Example projects shown for demonstration purposes — not real completed jobs.</p>
-            <div class="gallery-grid" id="gallery-grid"></div>
+            <div class="featured-grid" id="work-grid"></div>
         </section>
 
-        <section id="areas" class="areas-section">
-            <div class="section-head">
-                <h2>Areas We Cover</h2>
+        <section id="smart">
+            <div class="quality-grid">
+                <div class="quality-photo">
+                    <img src="/assets/images/demos/electrician-smart-panel.jpg" alt="A smart home control panel glowing amber on a wall, showing room temperature">
+                </div>
+                <div class="quality-copy">
+                    <h2>SMART ELECTRICAL</h2>
+                    <p>Bring your home into the smart era — lighting, heating, EV charging and automation, all designed and installed by the same certified team.</p>
+                    <ul class="checklist" id="smart-list"></ul>
+                </div>
             </div>
-            <div class="areas-chips" id="areas-chips"></div>
         </section>
 
         <section id="reviews" class="trade-reviews">
@@ -140,7 +143,7 @@
         </section>
 
         <section class="trade-final-cta">
-            <h2>Imagine this working for your business.</h2>
+            <h2>LET'S GET YOUR POWER SORTED.</h2>
             <p>This is only a demonstration. Shaka Tech can build a fully customised version for your business, including your branding, services, AI assistant and booking system.</p>
             <div class="cta-row" style="justify-content:center;">
                 <a href="/#contact" class="cta-button">Build My Website</a>
@@ -153,12 +156,12 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="contact-label">📞 Phone</span>
-                        <a href="tel:07700900123">07700 900123</a>
+                        <span class="contact-label"><svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2c-5.522 0-9.999 4.478-9.999 10 0 1.765.464 3.49 1.346 5.01L2 22l5.13-1.346A9.955 9.955 0 0 0 12 22c5.523 0 10-4.478 10-10S17.523 2 12.001 2zm0 18.31a8.283 8.283 0 0 1-4.221-1.152l-.303-.18-3.144.825.839-3.062-.198-.314A8.29 8.29 0 0 1 3.688 12c0-4.581 3.729-8.31 8.312-8.31 4.581 0 8.309 3.729 8.309 8.31 0 4.582-3.728 8.31-8.309 8.31z"/></svg> WhatsApp</span>
+                        <a href="https://wa.me/447518711632" target="_blank" rel="noopener">07518 711632</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">✉️ Email</span>
-                        <a href="mailto:hello@shakaelectrician-demo.co.uk">hello@shakaelectrician-demo.co.uk</a>
+                        <a href="mailto:hello@shakatech.co.uk">hello@shakatech.co.uk</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">📍 Location</span>
@@ -166,11 +169,16 @@
                     </div>
                 </div>
                 <form id="contact-form">
+                    <input type="hidden" name="access_key" value="e8c6b9ab-6d76-4ee5-a2fb-c34b78896fcd">
+                    <input type="hidden" name="subject" value="New enquiry from the Shaka Electrician demo page">
+                    <input type="hidden" name="from_name" value="Shaka Electrician Demo">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="tel" name="phone" placeholder="Your Phone (optional)">
                     <textarea name="message" placeholder="Tell us about your electrical project" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
+                    <p id="contact-form-status" class="form-status" role="status"></p>
                 </form>
             </div>
         </section>
@@ -186,7 +194,8 @@
         </div>
     </footer>
 
-    <script src="/assets/trades/electrician.js"></script>
+    <script src="/assets/trades/electrician.js?v=2"></script>
+    <script src="/assets/js/trade-icons.js?v=3"></script>
     <script src="/assets/js/trade-colors.js"></script>
     <script src="/assets/js/chatbot.js"></script>
     <script src="/script.js?v=2"></script>
@@ -196,20 +205,31 @@
 
         document.getElementById('services-grid').innerHTML = trade.services.map((s) => `
             <div class="service-card">
-                <div class="service-icon">${s.icon}</div>
+                <div class="service-icon">${tradeIcon(s.icon)}</div>
                 <h3>${s.name}</h3>
                 <p>${s.desc}</p>
             </div>
         `).join('');
 
-        document.getElementById('gallery-grid').innerHTML = trade.gallery.map((g) => `
-            <div class="gallery-tile">
-                <div class="icon">${g.icon}</div>
-                <div class="caption">${g.caption}</div>
+        document.getElementById('trust-grid').innerHTML = trade.trustPoints.map((t) => `
+            <div class="trust-item">
+                <span class="trust-icon">${tradeIcon(t.icon)}</span>
+                <span>${t.label}</span>
             </div>
         `).join('');
 
-        document.getElementById('areas-chips').innerHTML = trade.areas.map((a) => `<span class="area-chip">${a}</span>`).join('');
+        document.getElementById('work-grid').innerHTML = trade.work.map((w) => `
+            <article class="feature-card">
+                <div class="feature-card-photo"><img src="${w.img}" alt="${w.alt}" style="object-position:${w.pos || '50% 50%'}" loading="lazy"></div>
+                <div class="feature-card-caption">
+                    <h3>${w.label}</h3>
+                </div>
+            </article>
+        `).join('');
+
+        document.getElementById('smart-list').innerHTML = trade.smartFeatures.map((f) => `
+            <li><span class="check-icon">${tradeIcon(f.icon)}</span><span><strong>${f.label}</strong><br>${f.desc}</span></li>
+        `).join('');
 
         document.getElementById('reviews-grid').innerHTML = trade.reviews.map((r) => `
             <div class="review-card">

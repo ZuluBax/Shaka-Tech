@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css?v=2">
     <link rel="stylesheet" href="/assets/css/chatbot.css">
-    <link rel="stylesheet" href="/assets/css/demos.css?v=5">
-    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=4">
+    <link rel="stylesheet" href="/assets/css/demos.css?v=13">
+    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=15">
 </head>
 <body class="trade-site t-landscaper">
     <div class="demo-banner">
@@ -26,8 +26,8 @@
         <nav>
             <div class="logo">
                 <div class="logo-text-container">
-                    <span class="logo-text" data-bind="businessName">Shaka Landscaper</span>
-                    <span class="tagline" data-bind="mainService">GARDEN DESIGN &amp; LANDSCAPING</span>
+                    <span class="logo-text" data-bind="businessName">🌿 Shaka Landscaper</span>
+                    <span class="tagline" data-bind="mainService">LANDSCAPE DESIGN &amp; GARDEN MAINTENANCE</span>
                 </div>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -36,73 +36,123 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Our Work</a></li>
                 <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a class="trade-cta trade-cta--small" href="#contact" data-open-chat>Get a Quote</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="trade-hero">
+        <section id="home" class="trade-hero trade-hero--photo-bg">
+            <div class="hero-bg-photo">
+                <img src="/assets/images/demos/landscaper-hero.jpg" alt="A landscaped garden pathway lined with box hedging leading to a timber pergola" loading="eager">
+            </div>
             <div class="hero-grid">
                 <div class="hero-content">
-                    <span class="trade-eyebrow">Landscaping Specialists</span>
-                    <h1>Beautiful gardens across <span data-bind="town">West Yorkshire</span>.</h1>
-                    <p class="hero-lede">From full garden redesigns to new patios and driveways, <span data-bind="businessName">Shaka Landscaper</span> transforms outdoor spaces — with a website that answers your questions any time, day or night.</p>
+                    <span class="trade-eyebrow">Landscape Design • Garden Maintenance</span>
+                    <h1>DESIGNING OUTDOOR<br><span class="accent-text">SPACES YOU'LL LOVE.</span></h1>
+                    <p class="hero-lede">Beautiful gardens. Expert landscaping. Bespoke outdoor spaces.</p>
                     <div class="cta-row">
-                        <button type="button" class="trade-cta" data-open-chat>Get a Free Quote</button>
-                        <button type="button" class="trade-cta trade-cta--outline" data-open-chat>Book a Callback</button>
+                        <a href="#work" class="trade-cta trade-cta--outline">View Our Work</a>
+                        <button type="button" class="trade-cta" data-open-chat>Get a Quote</button>
                     </div>
                 </div>
-                <div class="trade-hero-visual">
-                    <div class="trade-badge-icon">🌳</div>
-                    <strong data-bind="businessName">Shaka Landscaper</strong>
-                    <span>Landscaping Services in <span data-bind="town">West Yorkshire</span></span>
+            </div>
+        </section>
+
+        <section id="services" class="services-float-wrap">
+            <div class="services-float" id="services-ribbon"></div>
+        </section>
+
+        <section id="about" class="quality-section">
+            <div class="quality-grid">
+                <div class="quality-copy">
+                    <h2>Beautiful gardens.<br>Built to enjoy.</h2>
+                    <p>We design and create beautiful outdoor spaces that bring your garden to life.</p>
+                    <ul class="checklist" id="intro-checklist"></ul>
+                </div>
+                <div class="quality-photo">
+                    <img src="/assets/images/demos/landscaper-lawn.jpg" alt="A freshly cut, striped lawn bordered by planting">
                 </div>
             </div>
         </section>
 
-        <svg class="wave-divider" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 22 C150 2, 300 42, 450 22 S750 2, 900 22 S1050 42, 1200 22" />
-        </svg>
+        <section class="photo-statement">
+            <div class="photo-statement-bg">
+                <img src="/assets/images/demos/landscaper-driveway.jpg" alt="A curved block-paved driveway with garden lighting at dusk" loading="lazy">
+            </div>
+            <div class="photo-statement-panel">
+                <h2>YOUR GARDEN.<br>YOUR SPACE.</h2>
+                <p>Designed around the way you live.</p>
+                <a href="#work" class="service-card-link">Discover Our Approach →</a>
+            </div>
+        </section>
 
-        <section id="services">
+        <section id="what-we-do">
             <div class="section-head">
                 <h2>Our Services</h2>
-                <p>Everything you need for a garden you'll love.</p>
             </div>
-            <div class="services-grid" id="services-grid"></div>
+            <div class="services-feature">
+                <div class="services-feature-main">
+                    <div class="service-icon" id="featured-service-icon"></div>
+                    <h3 id="featured-service-name"></h3>
+                    <p id="featured-service-desc"></p>
+                </div>
+                <div class="services-feature-photo">
+                    <img src="/assets/images/demos/landscaper-turfing.jpg" alt="A landscaper laying a roll of new turf">
+                </div>
+            </div>
+            <div class="services-list" id="services-list"></div>
         </section>
 
-        <section id="about">
-            <div class="trade-about">
-                <h2>About <span data-bind="businessName">Shaka Landscaper</span></h2>
-                <p>We're a local landscaping team serving <span data-bind="town">West Yorkshire</span>, dedicated to quality work and honest pricing. From a full redesign to a simple patio, we treat every garden like it's our own.</p>
-                <p>This page is a demonstration built by Shaka Tech — showing how an AI-powered website could work for a real landscaping business.</p>
-            </div>
-        </section>
-
-        <section id="gallery" class="trade-gallery">
+        <section id="work" class="trade-gallery">
             <div class="section-head">
-                <h2>Recent Work</h2>
+                <h2>Transforming Outdoor Spaces</h2>
             </div>
             <p class="gallery-note">Example projects shown for demonstration purposes — not real completed jobs.</p>
-            <div class="gallery-grid" id="gallery-grid"></div>
+            <div class="masonry-grid" id="work-grid"></div>
         </section>
 
-        <section id="areas" class="areas-section">
+        <section class="transformation-section">
             <div class="section-head">
-                <h2>Areas We Cover</h2>
+                <h2>Gardens We're Proud Of.</h2>
             </div>
-            <div class="areas-chips" id="areas-chips"></div>
+            <div class="transformation-photo">
+                <img src="/assets/images/demos/landscaper-lawn.jpg" alt="A finished, freshly landscaped lawn and garden border">
+            </div>
+        </section>
+
+        <section id="why" class="why-section">
+            <div class="section-head">
+                <h2>Why Choose Us?</h2>
+            </div>
+            <div class="services-grid" id="why-grid"></div>
+        </section>
+
+        <section class="quality-section">
+            <div class="quality-grid">
+                <div class="quality-photo">
+                    <img src="/assets/images/demos/landscaper-patio.jpg" alt="An evening patio with outdoor seating, lighting and planting">
+                </div>
+                <div class="quality-copy">
+                    <h2>MORE THAN A GARDEN.<br>AN OUTDOOR LIFESTYLE.</h2>
+                    <p>Create a space for entertaining, relaxing and enjoying your home outdoors.</p>
+                    <div class="cta-row">
+                        <a href="#work" class="trade-cta trade-cta--outline">Explore Outdoor Living</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="reviews" class="trade-reviews">
             <div class="section-head">
-                <h2>What Customers Say</h2>
+                <h2>What Our Clients Say</h2>
             </div>
+            <blockquote class="pull-quote">"Our garden has completely transformed. The design, workmanship and attention to detail were fantastic."</blockquote>
+            <p class="pull-quote-author">Sarah — West Yorkshire</p>
             <p class="reviews-note">Example customer feedback shown for demonstration purposes — not genuine reviews.</p>
             <div class="reviews-grid" id="reviews-grid"></div>
         </section>
@@ -136,12 +186,14 @@
             </div>
         </section>
 
-        <section class="trade-final-cta">
-            <h2>Imagine this working for your business.</h2>
-            <p>This is only a demonstration. Shaka Tech can build a fully customised version for your business, including your branding, services, AI assistant and booking system.</p>
-            <div class="cta-row" style="justify-content:center;">
-                <a href="/#contact" class="cta-button">Build My Website</a>
-                <a href="/#contact" class="btn-secondary">Book a Free Consultation</a>
+        <section class="photo-banner" id="final-cta">
+            <div class="photo-banner-bg">
+                <img src="/assets/images/demos/landscaper-pathway-lit.jpg" alt="A stepped garden pathway lit with lantern lighting at dusk" loading="lazy">
+            </div>
+            <div class="photo-banner-content">
+                <h2>READY TO TRANSFORM YOUR GARDEN?</h2>
+                <p>Let's talk about your outdoor space.</p>
+                <button type="button" class="trade-cta" data-open-chat>Book a Free Site Visit</button>
             </div>
         </section>
 
@@ -150,24 +202,29 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="contact-label">📞 Phone</span>
-                        <a href="tel:07700900123">07700 900123</a>
+                        <span class="contact-label"><svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2c-5.522 0-9.999 4.478-9.999 10 0 1.765.464 3.49 1.346 5.01L2 22l5.13-1.346A9.955 9.955 0 0 0 12 22c5.523 0 10-4.478 10-10S17.523 2 12.001 2zm0 18.31a8.283 8.283 0 0 1-4.221-1.152l-.303-.18-3.144.825.839-3.062-.198-.314A8.29 8.29 0 0 1 3.688 12c0-4.581 3.729-8.31 8.312-8.31 4.581 0 8.309 3.729 8.309 8.31 0 4.582-3.728 8.31-8.309 8.31z"/></svg> WhatsApp</span>
+                        <a href="https://wa.me/447518711632" target="_blank" rel="noopener">07518 711632</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">✉️ Email</span>
-                        <a href="mailto:hello@shakalandscaper-demo.co.uk">hello@shakalandscaper-demo.co.uk</a>
+                        <a href="mailto:hello@shakatech.co.uk">hello@shakatech.co.uk</a>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">📍 Location</span>
+                        <span class="contact-label">📍 Service Area</span>
                         <span data-bind="town">West Yorkshire</span>
                     </div>
                 </div>
                 <form id="contact-form">
+                    <input type="hidden" name="access_key" value="e8c6b9ab-6d76-4ee5-a2fb-c34b78896fcd">
+                    <input type="hidden" name="subject" value="New enquiry from the Shaka Landscaper demo page">
+                    <input type="hidden" name="from_name" value="Shaka Landscaper Demo">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="tel" name="phone" placeholder="Your Phone (optional)">
                     <textarea name="message" placeholder="Tell us about your garden project" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
+                    <p id="contact-form-status" class="form-status" role="status"></p>
                 </form>
             </div>
         </section>
@@ -180,10 +237,12 @@
                 <span class="tagline">DEMO WEBSITE</span>
             </div>
             <p>This is a demo website built by <a href="/">Shaka Tech</a> to showcase AI-powered websites for tradespeople.</p>
+            <p class="footer-legal">© 2026 Shaka Landscaper — a fictional demo business.</p>
         </div>
     </footer>
 
-    <script src="/assets/trades/landscaper.js"></script>
+    <script src="/assets/trades/landscaper.js?v=2"></script>
+    <script src="/assets/js/trade-icons.js?v=3"></script>
     <script src="/assets/js/trade-colors.js"></script>
     <script src="/assets/js/chatbot.js"></script>
     <script src="/script.js?v=2"></script>
@@ -191,22 +250,46 @@
     <script>
         const trade = window.SHAKA_TRADE;
 
-        document.getElementById('services-grid').innerHTML = trade.services.map((s) => `
+        document.getElementById('services-ribbon').innerHTML = trade.servicesRibbon.map((s) => `
             <div class="service-card">
-                <div class="service-icon">${s.icon}</div>
-                <h3>${s.name}</h3>
-                <p>${s.desc}</p>
+                <div class="service-icon">${tradeIcon(s.icon)}</div>
+                <h3>${s.label}</h3>
             </div>
         `).join('');
 
-        document.getElementById('gallery-grid').innerHTML = trade.gallery.map((g) => `
-            <div class="gallery-tile">
-                <div class="icon">${g.icon}</div>
-                <div class="caption">${g.caption}</div>
-            </div>
+        document.getElementById('intro-checklist').innerHTML = trade.intro.checklist.map((item) => `
+            <li><span class="check-icon">${tradeIcon('shieldCheck')}</span>${item}</li>
         `).join('');
 
-        document.getElementById('areas-chips').innerHTML = trade.areas.map((a) => `<span class="area-chip">${a}</span>`).join('');
+        document.getElementById('featured-service-icon').innerHTML = tradeIcon(trade.services.featured.icon);
+        document.getElementById('featured-service-name').textContent = trade.services.featured.name;
+        document.getElementById('featured-service-desc').textContent = trade.services.featured.desc;
+
+        document.getElementById('services-list').innerHTML = trade.services.list.map((s) => `
+            <a href="#contact" class="services-list-item" data-open-chat>
+                <span class="service-icon">${tradeIcon(s.icon)}</span>
+                <span class="services-list-name">${s.name}</span>
+                <span class="services-list-arrow">→</span>
+            </a>
+        `).join('');
+
+        document.getElementById('work-grid').innerHTML = trade.work.map((w) => `
+            <article class="masonry-item masonry-item--${w.span}">
+                <img src="${w.img}" alt="${w.alt}" style="object-position:${w.pos || '50% 50%'}" loading="lazy">
+                <div class="masonry-overlay">
+                    <h3>${w.label}</h3>
+                    <span>View Project →</span>
+                </div>
+            </article>
+        `).join('');
+
+        document.getElementById('why-grid').innerHTML = trade.whyChoose.map((f) => `
+            <div class="service-card">
+                <div class="service-icon">${tradeIcon(f.icon)}</div>
+                <h3>${f.name}</h3>
+                <p>${f.desc}</p>
+            </div>
+        `).join('');
 
         document.getElementById('reviews-grid').innerHTML = trade.reviews.map((r) => `
             <div class="review-card">
@@ -236,7 +319,10 @@
         });
 
         document.querySelectorAll('[data-open-chat]').forEach((btn) => {
-            btn.addEventListener('click', () => window.shakaFloatingChat.open());
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.shakaFloatingChat.open();
+            });
         });
     </script>
 </body>

@@ -1,27 +1,30 @@
 window.SHAKA_TRADE = {
     id: 'dog-walker',
     trade: 'Dog Walking & Grooming',
-    businessName: 'Tail Waggers Pet Care',
+    businessName: 'Shaka Dog Walker & Groomer',
     town: 'West Yorkshire',
     mainService: 'Dog Walking & Grooming',
 
     theme: {
-        accent: '#2BB3A3',
-        accent2: '#8CE0D3',
-        bg: '#0B1616',
-        bgAlt: '#122120',
-        text: '#E4F3F0',
-        muted: 'rgba(228, 243, 240, 0.65)',
-        headingFont: "'Fredoka', sans-serif",
-        googleFont: 'family=Fredoka:wght@500;600;700',
-        radius: '26px',
+        accent: '#D9466F',
+        accent2: '#F3A6B8',
+        bg: '#FAF7F2',
+        bgAlt: '#FFFFFF',
+        text: '#292827',
+        muted: '#6F6B68',
+        headerBg: '#FAF7F2',
+        headerText: '#292827',
+        headingFont: "'Baloo 2', sans-serif",
+        bodyFont: "'DM Sans', sans-serif",
+        googleFont: 'family=Baloo+2:wght@700;800&family=DM+Sans:wght@400;500;600&family=Quicksand:wght@500;600',
+        radius: '20px',
     },
 
     chatbot: {
-        persona: 'Tail Waggers Assistant',
-        avatar: '🐕',
+        persona: 'Shaka Dog Walker Assistant',
+        avatar: '🐾',
         greeting: "👋 Hi! I'm the AI assistant for {business}. How can I help?",
-        quickOptions: ['Get a quote', 'Book a callback', 'Ask a question', 'Emergency repair'],
+        quickOptions: ['Book a walk', 'Book grooming', 'Ask a question', 'Get a quote'],
         knowledge: [
             { keywords: ['price', 'cost', 'much', 'quote'], answer: "A 30-minute solo walk starts from £14, group walks and grooming packages vary by size and coat. Want me to arrange a quote?" },
             { keywords: ['area', 'cover', 'location', 'where'], answer: "We cover Leeds, Huddersfield, Bradford, Wakefield and the surrounding West Yorkshire area." },
@@ -34,29 +37,59 @@ window.SHAKA_TRADE = {
     },
 
     services: [
-        { icon: '🐕', name: 'Dog Walking', desc: 'Solo and small-group walks, tailored to your dog\'s energy and needs.' },
-        { icon: '🛁', name: 'Dog Grooming', desc: 'Full grooming service including bathing, brushing and styling.' },
-        { icon: '🐾', name: 'Puppy Visits', desc: 'Short, frequent visits to keep young puppies happy and settled.' },
-        { icon: '🏠', name: 'Pet Sitting', desc: 'In-home pet sitting for holidays, work trips and long days.' },
-        { icon: '✂️', name: 'Nail Trimming', desc: 'Gentle, stress-free nail trimming for dogs of all sizes.' },
-        { icon: '✨', name: 'Bathing & Styling', desc: 'Breed-appropriate styling and a fresh, clean finish every time.' },
+        { icon: 'paw', name: 'Dog Walking', desc: "Fun, safe walks tailored to your dog's needs." },
+        { icon: 'scissorsGroom', name: 'Grooming', desc: 'Professional grooming to keep your dog looking and feeling great.' },
+        { icon: 'calendar', name: 'Pet Sitting', desc: "Reliable care while you're away." },
+        { icon: 'heart', name: 'Puppy Care', desc: 'Patient, loving support for your newest family member.' },
+        { icon: 'home', name: 'Home Visits', desc: 'Care and attention in the comfort of their own home.' },
     ],
 
-    gallery: [
-        { icon: '🐕', caption: 'Morning group walk — Leeds' },
-        { icon: '🛁', caption: 'Full groom & style — Huddersfield' },
-        { icon: '🐾', caption: 'Puppy visit — Bradford' },
-        { icon: '✂️', caption: 'Nail trim session — Wakefield' },
-        { icon: '🏠', caption: 'Holiday pet sitting — Halifax' },
-        { icon: '✨', caption: 'Bath & blow dry — Dewsbury' },
+    trust: {
+        heading: "They're Not Just Pets.<br><span class=\"accent-text\">They're Family.</span>",
+        body: "That's why we treat every dog with the same love, patience and attention we'd want for our own.",
+        checklist: ['Fully Insured', 'Experienced &amp; Caring', 'Individual Attention', 'Flexible Bookings'],
+    },
+
+    walking: {
+        heading: 'Adventures Start Here.',
+        body: "Safe, fun and stimulating walks designed around your dog's personality and energy.",
+        list: ['Solo Walks', 'Group Walks', 'Puppy Walks', 'Adventure Walks'],
+    },
+
+    grooming: {
+        heading: 'Look Good. Feel Good.',
+        body: "From a fresh wash to a full groom, we'll make sure your dog leaves looking and feeling their best.",
+        list: ['Bath &amp; Dry', 'Full Groom', 'Brush &amp; Deshed', 'Nail Trimming'],
+    },
+
+    dogs: [
+        { name: 'Milo', breed: 'Cockapoo', img: '/assets/images/demos/dogwalker-hero.jpg', pos: '65% 35%', bio: "Milo loves his afternoon walks and never turns down a belly rub. He's one of our regulars and always greets us with a wagging tail.", fact: 'Favourite thing: chasing his tennis ball.' },
+        { name: 'Bella', breed: 'Golden Retriever', img: '/assets/images/demos/dogwalker-family.jpg', pos: '60% 30%', bio: "Bella is gentle, friendly and loves nothing more than a cuddle on the sofa after a long walk. She's great with other dogs too.", fact: 'Favourite thing: cuddles on the sofa.' },
+        { name: 'Rosie', breed: 'Cockapoo Puppy', img: '/assets/images/demos/dogwalker-puppy.jpg', pos: '50% 40%', bio: "Rosie is the newest member of the pack — still learning the ropes, full of energy and always up for playtime with her rope toy.", fact: 'Favourite thing: her pink rope toy.' },
+        { name: 'Archie', breed: 'Dalmatian', img: '/assets/images/demos/dogwalker-walk.jpg', pos: '50% 45%', bio: "Archie has boundless energy and loves a good run in the park. Ball games are his absolute favourite part of the walk.", fact: 'Favourite thing: chasing his ball in the park.' },
+    ],
+
+    approach: [
+        { num: '01', label: 'Meet', desc: 'We get to know you and your dog.' },
+        { num: '02', label: 'Understand', desc: 'We learn their personality and routine.' },
+        { num: '03', label: 'Care', desc: 'We provide personalised attention.' },
+        { num: '04', label: 'Happy', desc: 'You get a happy, well-cared-for dog.' },
+    ],
+
+    work: [
+        { img: '/assets/images/demos/dogwalker-walk.jpg', pos: '50% 40%', label: 'Park Adventures', span: 'big', alt: 'A dalmatian running and playing with a ball in a park' },
+        { img: '/assets/images/demos/dogwalker-grooming.jpg', pos: '50% 30%', label: 'Grooming Day', span: 'tall', alt: 'A groomer brushing a cockapoo on a grooming table' },
+        { img: '/assets/images/demos/dogwalker-hero.jpg', pos: '65% 35%', label: 'Happy At Home', span: 'normal', alt: 'A cockapoo sitting happily in a cosy dog bed' },
+        { img: '/assets/images/demos/dogwalker-family.jpg', pos: '60% 30%', label: 'Family Time', span: 'normal', alt: 'A golden retriever being cuddled by its owner on a sofa' },
+        { img: '/assets/images/demos/dogwalker-puppy.jpg', pos: '50% 40%', label: 'Puppy Playtime', span: 'wide', alt: 'A cockapoo puppy playing with a rope toy on a blanket' },
     ],
 
     areas: ['Leeds', 'Huddersfield', 'Bradford', 'Wakefield', 'Halifax', 'Dewsbury', 'Batley', 'Pontefract'],
 
     reviews: [
-        { stars: 5, text: 'Our dog absolutely adores his daily walk — always comes back happy and tired out.', author: 'M. Ellison, Leeds' },
-        { stars: 5, text: 'Best groom she\'s ever had, and they were so gentle and patient with her.', author: 'R. Kellett, Huddersfield' },
-        { stars: 4, text: 'Reliable, friendly and always send photo updates. Highly recommend.', author: 'S. Waddington, Bradford' },
+        { stars: 5, text: 'Our dog absolutely loves his walks. He gets excited as soon as he sees the Shaka van!', author: 'Emma & Bailey', img: '/assets/images/demos/dogwalker-walk.jpg' },
+        { stars: 5, text: "Best groom she's ever had, and they were so gentle and patient with her.", author: 'Rachel & Bella', img: '/assets/images/demos/dogwalker-family.jpg' },
+        { stars: 4, text: 'Reliable, friendly and always send photo updates. Highly recommend.', author: 'Sam & Rosie', img: '/assets/images/demos/dogwalker-puppy.jpg' },
     ],
 
     faqs: [

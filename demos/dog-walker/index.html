@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css?v=2">
     <link rel="stylesheet" href="/assets/css/chatbot.css">
-    <link rel="stylesheet" href="/assets/css/demos.css?v=5">
-    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=4">
+    <link rel="stylesheet" href="/assets/css/demos.css?v=13">
+    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=15">
 </head>
 <body class="trade-site t-dog-walker">
     <div class="demo-banner">
@@ -26,7 +26,7 @@
         <nav>
             <div class="logo">
                 <div class="logo-text-container">
-                    <span class="logo-text" data-bind="businessName">Shaka Dog Walker & Groomer</span>
+                    <span class="logo-text" data-bind="businessName">🐾 Shaka Dog Walker &amp; Groomer</span>
                     <span class="tagline" data-bind="mainService">DOG WALKING &amp; GROOMING</span>
                 </div>
             </div>
@@ -36,72 +36,119 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#trust">About</a></li>
+                <li><a href="#dogs">Our Dogs</a></li>
                 <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a class="trade-cta trade-cta--small" href="#contact" data-open-chat>Book a Walk</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="trade-hero">
+        <section id="home" class="trade-hero trade-hero--photo-bg">
+            <div class="hero-bg-photo">
+                <img src="/assets/images/demos/dogwalker-hero.jpg" alt="A happy cockapoo sitting in a cosy dog bed" loading="eager" style="object-position:65% 35%">
+            </div>
+            <div class="hero-float-badge">
+                <strong>⭐ TRUSTED PET CARE</strong>
+                <span>Loving • Reliable • Professional</span>
+            </div>
             <div class="hero-grid">
                 <div class="hero-content">
-                    <span class="trade-eyebrow">Dog Walking &amp; Grooming Specialists</span>
-                    <h1>Loving dog care across <span data-bind="town">West Yorkshire</span>.</h1>
-                    <p class="hero-lede">From daily walks to full grooming, <span data-bind="businessName">Shaka Dog Walker & Groomer</span> keeps your dog happy, healthy and looking great — with a website that answers your questions any time, day or night.</p>
+                    <span class="trade-eyebrow">Dog Walking • Grooming • Pet Care</span>
+                    <h1>HAPPY PETS.<br><span class="accent-text">HAPPY LIFE.</span></h1>
+                    <p class="hero-lede">Loving, reliable care for your four-legged family members.</p>
                     <div class="cta-row">
-                        <button type="button" class="trade-cta" data-open-chat>Get a Free Quote</button>
-                        <button type="button" class="trade-cta trade-cta--outline" data-open-chat>Book a Callback</button>
+                        <button type="button" class="trade-cta" data-open-chat>Book a Walk</button>
+                        <a href="#services" class="trade-cta trade-cta--outline">Our Services</a>
                     </div>
-                </div>
-                <div class="trade-hero-visual">
-                    <div class="trade-badge-icon">🐕</div>
-                    <strong data-bind="businessName">Shaka Dog Walker & Groomer</strong>
-                    <span>Dog Walking &amp; Grooming in <span data-bind="town">West Yorkshire</span></span>
                 </div>
             </div>
         </section>
 
-        <div class="paw-trail" aria-hidden="true">
-            <span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span>
-        </div>
-
         <section id="services">
             <div class="section-head">
+                <span class="trade-eyebrow">What We Offer</span>
                 <h2>Our Services</h2>
-                <p>Everything your dog needs to stay happy and healthy.</p>
             </div>
             <div class="services-grid" id="services-grid"></div>
         </section>
 
-        <section id="about">
-            <div class="trade-about">
-                <h2>About <span data-bind="businessName">Shaka Dog Walker & Groomer</span></h2>
-                <p>We're a local dog walking and grooming team serving <span data-bind="town">West Yorkshire</span>, dedicated to genuine care and reliability. Whether it's a daily walk or a full groom, we treat every dog like our own.</p>
-                <p>This page is a demonstration built by Shaka Tech — showing how an AI-powered website could work for a real pet care business.</p>
+        <section id="trust" class="quality-section">
+            <div class="quality-grid">
+                <div class="quality-photo">
+                    <img src="/assets/images/demos/dogwalker-family.jpg" alt="A golden retriever being cuddled by its owner on a sofa" style="object-position:60% 30%">
+                </div>
+                <div class="quality-copy">
+                    <h2 id="trust-heading"></h2>
+                    <p id="trust-body"></p>
+                    <ul class="checklist" id="trust-checklist"></ul>
+                </div>
             </div>
+        </section>
+
+        <section id="walking" class="quality-section">
+            <div class="quality-grid">
+                <div class="quality-copy">
+                    <span class="trade-eyebrow">Dog Walking</span>
+                    <h2 id="walking-heading"></h2>
+                    <p id="walking-body"></p>
+                    <ul class="checklist" id="walking-list"></ul>
+                    <div class="cta-row">
+                        <button type="button" class="trade-cta" data-open-chat>Book a Walk →</button>
+                    </div>
+                </div>
+                <div class="quality-photo">
+                    <img src="/assets/images/demos/dogwalker-walk.jpg" alt="A dalmatian running and playing with a ball in a park" style="object-position:50% 40%">
+                </div>
+            </div>
+        </section>
+
+        <section id="grooming" class="quality-section">
+            <div class="quality-grid">
+                <div class="quality-photo">
+                    <img src="/assets/images/demos/dogwalker-grooming.jpg" alt="A groomer brushing a cockapoo on a grooming table" style="object-position:50% 25%">
+                </div>
+                <div class="quality-copy">
+                    <span class="trade-eyebrow">Grooming</span>
+                    <h2 id="grooming-heading"></h2>
+                    <p id="grooming-body"></p>
+                    <ul class="checklist" id="grooming-list"></ul>
+                    <div class="cta-row">
+                        <button type="button" class="trade-cta" data-open-chat>Book Grooming →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dogs" class="trade-gallery">
+            <div class="section-head">
+                <span class="trade-eyebrow">Our Happy Customers</span>
+                <h2>Meet The Dogs</h2>
+            </div>
+            <p class="gallery-note">Example profiles shown for demonstration purposes — click a dog to learn more.</p>
+            <div class="masonry-grid" id="dogs-grid"></div>
+        </section>
+
+        <section id="approach" class="process-section">
+            <div class="section-head">
+                <h2>Care That Goes Further.</h2>
+            </div>
+            <div class="process-grid" id="approach-grid"></div>
         </section>
 
         <section id="gallery" class="trade-gallery">
             <div class="section-head">
-                <h2>Recent Work</h2>
+                <h2>Happy Dogs. Happy Moments.</h2>
             </div>
-            <p class="gallery-note">Example visits shown for demonstration purposes — not real customer photos.</p>
-            <div class="gallery-grid" id="gallery-grid"></div>
-        </section>
-
-        <section id="areas" class="areas-section">
-            <div class="section-head">
-                <h2>Areas We Cover</h2>
-            </div>
-            <div class="areas-chips" id="areas-chips"></div>
+            <p class="gallery-note">Example photos shown for demonstration purposes — not real customer photos.</p>
+            <div class="masonry-grid" id="work-grid"></div>
         </section>
 
         <section id="reviews" class="trade-reviews">
             <div class="section-head">
-                <h2>What Customers Say</h2>
+                <h2>Tails Of Happy Customers.</h2>
             </div>
             <p class="reviews-note">Example customer feedback shown for demonstration purposes — not genuine reviews.</p>
             <div class="reviews-grid" id="reviews-grid"></div>
@@ -136,39 +183,60 @@
             </div>
         </section>
 
-        <section class="trade-final-cta">
-            <h2>Imagine this working for your business.</h2>
-            <p>This is only a demonstration. Shaka Tech can build a fully customised version for your business, including your branding, services, AI assistant and booking system.</p>
-            <div class="cta-row" style="justify-content:center;">
-                <a href="/#contact" class="cta-button">Build My Website</a>
-                <a href="/#contact" class="btn-secondary">Book a Free Consultation</a>
+        <section class="booking-section" id="contact">
+            <div class="booking-bg">
+                <img src="/assets/images/demos/dogwalker-walk.jpg" alt="A dalmatian running and playing in a park" loading="lazy">
             </div>
-        </section>
-
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-label">📞 Phone</span>
-                        <a href="tel:07700900123">07700 900123</a>
+            <div class="booking-panel">
+                <div>
+                    <div class="section-head">
+                        <h2>Ready To Get Started?</h2>
+                        <p>Book your dog's first walk or grooming appointment.</p>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-label">✉️ Email</span>
-                        <a href="mailto:hello@shakadogwalker-demo.co.uk">hello@shakadogwalker-demo.co.uk</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">📍 Location</span>
-                        <span data-bind="town">West Yorkshire</span>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-label"><svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2c-5.522 0-9.999 4.478-9.999 10 0 1.765.464 3.49 1.346 5.01L2 22l5.13-1.346A9.955 9.955 0 0 0 12 22c5.523 0 10-4.478 10-10S17.523 2 12.001 2zm0 18.31a8.283 8.283 0 0 1-4.221-1.152l-.303-.18-3.144.825.839-3.062-.198-.314A8.29 8.29 0 0 1 3.688 12c0-4.581 3.729-8.31 8.312-8.31 4.581 0 8.309 3.729 8.309 8.31 0 4.582-3.728 8.31-8.309 8.31z"/></svg> WhatsApp</span>
+                            <a href="https://wa.me/447518711632" target="_blank" rel="noopener">07518 711632</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">✉️ Email</span>
+                            <a href="mailto:hello@shakatech.co.uk">hello@shakatech.co.uk</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">📍 Service Area</span>
+                            <span data-bind="town">West Yorkshire</span>
+                        </div>
                     </div>
                 </div>
                 <form id="contact-form">
+                    <input type="hidden" name="access_key" value="e8c6b9ab-6d76-4ee5-a2fb-c34b78896fcd">
+                    <input type="hidden" name="subject" value="New booking enquiry from the Shaka Dog Walker & Groomer demo page">
+                    <input type="hidden" name="from_name" value="Shaka Dog Walker Demo">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Your Phone">
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="tel" name="phone" placeholder="Your Phone (optional)">
-                    <textarea name="message" placeholder="Tell us about your dog" rows="5" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <input type="text" name="dogName" placeholder="Dog's Name">
+                    <select name="service" required>
+                        <option value="" disabled selected>Service Required</option>
+                        <option>Dog Walking</option>
+                        <option>Grooming</option>
+                        <option>Pet Sitting</option>
+                        <option>Puppy Care</option>
+                        <option>Home Visits</option>
+                    </select>
+                    <input type="date" name="preferredDate" placeholder="Preferred Date">
+                    <button type="submit">Book Now →</button>
+                    <p id="contact-form-status" class="form-status" role="status"></p>
                 </form>
+            </div>
+        </section>
+
+        <section class="trade-final-cta">
+            <h2>HAPPY DOG. HAPPY OWNER.</h2>
+            <p>Let's get your dog's next adventure booked.</p>
+            <div class="cta-row" style="justify-content:center;">
+                <button type="button" class="trade-cta" data-open-chat>Book a Walk →</button>
             </div>
         </section>
     </main>
@@ -176,14 +244,31 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <span class="logo-text" data-bind="businessName">Shaka Dog Walker & Groomer</span>
+                <span class="logo-text" data-bind="businessName">🐾 Shaka Dog Walker &amp; Groomer</span>
                 <span class="tagline">DEMO WEBSITE</span>
             </div>
             <p>This is a demo website built by <a href="/">Shaka Tech</a> to showcase AI-powered websites for tradespeople.</p>
+            <p class="footer-legal">© 2026 Shaka Dog Walker &amp; Groomer — a fictional demo business. Privacy Policy | Terms &amp; Conditions</p>
         </div>
     </footer>
 
-    <script src="/assets/trades/dog-walker.js"></script>
+    <div class="profile-modal" id="dog-modal" hidden>
+        <div class="profile-modal-backdrop" data-close-modal></div>
+        <div class="profile-modal-panel">
+            <button type="button" class="profile-modal-close" data-close-modal aria-label="Close">✕</button>
+            <div class="profile-modal-photo"><img id="dog-modal-img" src="" alt=""></div>
+            <div class="profile-modal-body">
+                <span class="demo-tag-corner" style="position:static; display:inline-block; margin-bottom:0.6rem;">Demo Profile</span>
+                <h3 id="dog-modal-name"></h3>
+                <span class="profile-modal-breed" id="dog-modal-breed"></span>
+                <p id="dog-modal-bio"></p>
+                <p id="dog-modal-fact"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/trades/dog-walker.js?v=2"></script>
+    <script src="/assets/js/trade-icons.js?v=3"></script>
     <script src="/assets/js/trade-colors.js"></script>
     <script src="/assets/js/chatbot.js"></script>
     <script src="/script.js?v=2"></script>
@@ -193,27 +278,88 @@
 
         document.getElementById('services-grid').innerHTML = trade.services.map((s) => `
             <div class="service-card">
-                <div class="service-icon">${s.icon}</div>
+                <div class="service-icon">${tradeIcon(s.icon)}</div>
                 <h3>${s.name}</h3>
                 <p>${s.desc}</p>
             </div>
         `).join('');
 
-        document.getElementById('gallery-grid').innerHTML = trade.gallery.map((g) => `
-            <div class="gallery-tile">
-                <div class="icon">${g.icon}</div>
-                <div class="caption">${g.caption}</div>
+        document.getElementById('trust-heading').innerHTML = trade.trust.heading;
+        document.getElementById('trust-body').textContent = trade.trust.body;
+        document.getElementById('trust-checklist').innerHTML = trade.trust.checklist.map((item) => `
+            <li><span class="check-icon">${tradeIcon('shieldCheck')}</span>${item}</li>
+        `).join('');
+
+        document.getElementById('walking-heading').textContent = trade.walking.heading;
+        document.getElementById('walking-body').textContent = trade.walking.body;
+        document.getElementById('walking-list').innerHTML = trade.walking.list.map((item) => `
+            <li><span class="check-icon">${tradeIcon('paw')}</span>${item}</li>
+        `).join('');
+
+        document.getElementById('grooming-heading').textContent = trade.grooming.heading;
+        document.getElementById('grooming-body').textContent = trade.grooming.body;
+        document.getElementById('grooming-list').innerHTML = trade.grooming.list.map((item) => `
+            <li><span class="check-icon">${tradeIcon('paw')}</span>${item}</li>
+        `).join('');
+
+        document.getElementById('dogs-grid').innerHTML = trade.dogs.map((d, i) => `
+            <button type="button" class="masonry-item masonry-item--normal" data-dog="${i}">
+                <img src="${d.img}" alt="${d.name}, a ${d.breed}" style="object-position:${d.pos}" loading="lazy">
+                <div class="masonry-overlay">
+                    <h3>🐾 ${d.name}</h3>
+                    <span>${d.breed}</span>
+                </div>
+            </button>
+        `).join('');
+
+        const dogModal = document.getElementById('dog-modal');
+        document.querySelectorAll('[data-dog]').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const dog = trade.dogs[Number(btn.dataset.dog)];
+                document.getElementById('dog-modal-img').src = dog.img;
+                document.getElementById('dog-modal-img').alt = `${dog.name}, a ${dog.breed}`;
+                document.getElementById('dog-modal-img').style.objectPosition = dog.pos;
+                document.getElementById('dog-modal-name').textContent = `🐾 ${dog.name}`;
+                document.getElementById('dog-modal-breed').textContent = dog.breed;
+                document.getElementById('dog-modal-bio').textContent = dog.bio;
+                document.getElementById('dog-modal-fact').textContent = dog.fact;
+                dogModal.hidden = false;
+            });
+        });
+        dogModal.querySelectorAll('[data-close-modal]').forEach((el) => {
+            el.addEventListener('click', () => { dogModal.hidden = true; });
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') dogModal.hidden = true;
+        });
+
+        document.getElementById('approach-grid').innerHTML = trade.approach.map((p, i) => `
+            <div class="process-step">
+                ${i > 0 ? '<span class="process-step-runner">🐾</span>' : ''}
+                <span class="process-num">${p.num}</span>
+                <h3>${p.label}</h3>
+                <p>${p.desc}</p>
             </div>
         `).join('');
 
-        document.getElementById('areas-chips').innerHTML = trade.areas.map((a) => `<span class="area-chip">${a}</span>`).join('');
+        document.getElementById('work-grid').innerHTML = trade.work.map((w) => `
+            <article class="masonry-item masonry-item--normal">
+                <img src="${w.img}" alt="${w.alt}" style="object-position:${w.pos || '50% 50%'}" loading="lazy">
+                <div class="masonry-overlay">
+                    <h3>${w.label}</h3>
+                </div>
+            </article>
+        `).join('');
 
         document.getElementById('reviews-grid').innerHTML = trade.reviews.map((r) => `
             <div class="review-card">
                 <span class="demo-tag-corner">Demo Review</span>
                 <div class="stars">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div>
                 <p>"${r.text}"</p>
-                <div class="author">${r.author}</div>
+                <div class="review-author-row">
+                    <div class="review-avatar"><img src="${r.img}" alt=""></div>
+                    <div class="author">${r.author}</div>
+                </div>
             </div>
         `).join('');
 
@@ -236,7 +382,10 @@
         });
 
         document.querySelectorAll('[data-open-chat]').forEach((btn) => {
-            btn.addEventListener('click', () => window.shakaFloatingChat.open());
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.shakaFloatingChat.open();
+            });
         });
     </script>
 </body>

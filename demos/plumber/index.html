@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css?v=2">
     <link rel="stylesheet" href="/assets/css/chatbot.css">
-    <link rel="stylesheet" href="/assets/css/demos.css?v=5">
-    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=4">
+    <link rel="stylesheet" href="/assets/css/demos.css?v=13">
+    <link rel="stylesheet" href="/assets/css/trade-signatures.css?v=15">
 </head>
 <body class="trade-site t-plumber">
     <div class="demo-banner">
@@ -36,10 +36,11 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#work">Our Work</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a class="trade-cta trade-cta--small" href="#contact" data-open-chat>Get a Free Quote</a></li>
             </ul>
         </nav>
     </header>
@@ -48,51 +49,68 @@
         <section id="home" class="trade-hero">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <span class="trade-eyebrow">Plumbing Specialists</span>
-                    <h1>Reliable plumbing services across <span data-bind="town">West Yorkshire</span>.</h1>
-                    <p class="hero-lede">From emergency leaks to full bathroom fits, <span data-bind="businessName">Shaka Plumber</span> keeps your home running smoothly — with a website that answers your questions any time, day or night.</p>
+                    <span class="trade-eyebrow">Fast • Reliable • Professional</span>
+                    <h1>PLUMBING SOLUTIONS<br><span class="accent-text">YOU CAN TRUST.</span></h1>
+                    <p class="hero-lede">Fast, reliable and professional plumbing services for homes and businesses across <span data-bind="town">West Yorkshire</span> — with a website that answers your questions any time, day or night.</p>
+                    <ul class="checklist" id="hero-checklist"></ul>
                     <div class="cta-row">
                         <button type="button" class="trade-cta" data-open-chat>Get a Free Quote</button>
-                        <button type="button" class="trade-cta trade-cta--outline" data-open-chat>Book a Callback</button>
+                        <a href="#services" class="trade-cta trade-cta--outline">Our Services</a>
                     </div>
                 </div>
                 <div class="trade-hero-visual">
-                    <div class="trade-badge-icon">🚰</div>
-                    <strong data-bind="businessName">Shaka Plumber</strong>
-                    <span>Plumbing Services in <span data-bind="town">West Yorkshire</span></span>
+                    <img src="/assets/images/demos/plumber-hero.jpg" alt="Water running from a modern chrome kitchen tap" style="object-position:55% 40%">
                 </div>
             </div>
         </section>
 
-        <svg class="pipe-divider" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 30 H300 C340 30 340 10 380 10 H500 C540 10 540 50 580 50 H700 C740 50 740 30 780 30 H1200" />
-            <circle cx="380" cy="10" r="6" />
-            <circle cx="580" cy="50" r="6" />
-            <circle cx="780" cy="30" r="6" />
-        </svg>
+        <section id="services-bar" class="services-strip">
+            <div class="services-grid is-strip" id="services-bar-grid"></div>
+        </section>
+
+        <section id="why" class="quality-section">
+            <div class="quality-grid">
+                <div class="quality-copy">
+                    <span class="trade-eyebrow">Here When You Need Us</span>
+                    <h2>Professional plumbing without the hassle.</h2>
+                    <p>We're a local plumbing team serving <span data-bind="town">West Yorkshire</span>, dedicated to fast response and honest pricing. From a dripping tap to a full bathroom, we treat every job like it's our own home.</p>
+                    <ul class="checklist" id="why-checklist"></ul>
+                </div>
+                <div class="quality-photo">
+                    <img src="/assets/images/demos/plumber-bathroom.jpg" alt="A modern freestanding bathtub and walk-in shower installation" style="object-position:45% 55%">
+                </div>
+            </div>
+        </section>
 
         <section id="services">
             <div class="section-head">
-                <h2>Our Services</h2>
+                <h2>OUR PLUMBING SERVICES</h2>
                 <p>Everything you need for a home that runs smoothly.</p>
             </div>
             <div class="services-grid" id="services-grid"></div>
         </section>
 
-        <section id="about">
-            <div class="trade-about">
-                <h2>About <span data-bind="businessName">Shaka Plumber</span></h2>
-                <p>We're a local plumbing team serving <span data-bind="town">West Yorkshire</span>, dedicated to fast response and honest pricing. From a dripping tap to a full bathroom, we treat every job like it's our own home.</p>
-                <p>This page is a demonstration built by Shaka Tech — showing how an AI-powered website could work for a real plumbing business.</p>
+        <section id="emergency" class="emergency-cta">
+            <h2>PLUMBING EMERGENCY?<br>WE'RE HERE TO HELP.</h2>
+            <div class="emergency-actions">
+                <a href="https://wa.me/447518711632" target="_blank" rel="noopener" class="trade-cta">Call Now</a>
+                <span class="emergency-label">24/7 Emergency Plumbing</span>
             </div>
         </section>
 
-        <section id="gallery" class="trade-gallery">
+        <section id="work" class="trade-gallery">
             <div class="section-head">
-                <h2>Recent Work</h2>
+                <h2>OUR RECENT WORK</h2>
             </div>
             <p class="gallery-note">Example projects shown for demonstration purposes — not real completed jobs.</p>
-            <div class="gallery-grid" id="gallery-grid"></div>
+            <div class="featured-grid" id="work-grid"></div>
+        </section>
+
+        <section id="trust" class="trust-section">
+            <div class="section-head">
+                <h2>WHY CHOOSE US</h2>
+            </div>
+            <div class="services-grid" id="trust-grid-cards"></div>
         </section>
 
         <section id="areas" class="areas-section">
@@ -104,7 +122,7 @@
 
         <section id="reviews" class="trade-reviews">
             <div class="section-head">
-                <h2>What Customers Say</h2>
+                <h2>WHAT OUR CUSTOMERS SAY</h2>
             </div>
             <p class="reviews-note">Example customer feedback shown for demonstration purposes — not genuine reviews.</p>
             <div class="reviews-grid" id="reviews-grid"></div>
@@ -148,29 +166,38 @@
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Get In Touch</h2>
+        <section id="contact" class="quote-section">
+            <div class="section-head">
+                <h2>NEED A PLUMBER?</h2>
+                <p>Get in touch today for a free, no-obligation quote.</p>
+            </div>
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="contact-label">📞 Phone</span>
-                        <a href="tel:07700900123">07700 900123</a>
+                        <span class="contact-label"><svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2c-5.522 0-9.999 4.478-9.999 10 0 1.765.464 3.49 1.346 5.01L2 22l5.13-1.346A9.955 9.955 0 0 0 12 22c5.523 0 10-4.478 10-10S17.523 2 12.001 2zm0 18.31a8.283 8.283 0 0 1-4.221-1.152l-.303-.18-3.144.825.839-3.062-.198-.314A8.29 8.29 0 0 1 3.688 12c0-4.581 3.729-8.31 8.312-8.31 4.581 0 8.309 3.729 8.309 8.31 0 4.582-3.728 8.31-8.309 8.31z"/></svg> WhatsApp</span>
+                        <a href="https://wa.me/447518711632" target="_blank" rel="noopener">07518 711632</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">✉️ Email</span>
-                        <a href="mailto:hello@shakaplumber-demo.co.uk">hello@shakaplumber-demo.co.uk</a>
+                        <a href="mailto:hello@shakatech.co.uk">hello@shakatech.co.uk</a>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">📍 Location</span>
+                        <span class="contact-label">📍 Service Area</span>
                         <span data-bind="town">West Yorkshire</span>
                     </div>
                 </div>
                 <form id="contact-form">
+                    <input type="hidden" name="access_key" value="e8c6b9ab-6d76-4ee5-a2fb-c34b78896fcd">
+                    <input type="hidden" name="subject" value="New enquiry from the Shaka Plumber demo page">
+                    <input type="hidden" name="from_name" value="Shaka Plumber Demo">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="tel" name="phone" placeholder="Your Phone (optional)">
+                    <input type="text" name="service" placeholder="Service Required (optional)">
                     <textarea name="message" placeholder="Tell us about your plumbing project" rows="5" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <button type="submit">Get My Free Quote</button>
+                    <p id="contact-form-status" class="form-status" role="status"></p>
                 </form>
             </div>
         </section>
@@ -186,7 +213,8 @@
         </div>
     </footer>
 
-    <script src="/assets/trades/plumber.js"></script>
+    <script src="/assets/trades/plumber.js?v=4"></script>
+    <script src="/assets/js/trade-icons.js?v=3"></script>
     <script src="/assets/js/trade-colors.js"></script>
     <script src="/assets/js/chatbot.js"></script>
     <script src="/script.js?v=2"></script>
@@ -194,19 +222,44 @@
     <script>
         const trade = window.SHAKA_TRADE;
 
+        document.getElementById('hero-checklist').innerHTML = trade.heroChecklist.map((item) => `
+            <li><span class="check-icon">${tradeIcon('shieldCheck')}</span>${item}</li>
+        `).join('');
+
+        document.getElementById('services-bar-grid').innerHTML = trade.servicesBar.map((s) => `
+            <div class="service-card">
+                <div class="service-icon">${tradeIcon(s.icon)}</div>
+                <h3>${s.label}</h3>
+            </div>
+        `).join('');
+
+        document.getElementById('why-checklist').innerHTML = trade.whyChoose.checklist.map((item) => `
+            <li><span class="check-icon">${tradeIcon('shieldCheck')}</span>${item}</li>
+        `).join('');
+
         document.getElementById('services-grid').innerHTML = trade.services.map((s) => `
             <div class="service-card">
-                <div class="service-icon">${s.icon}</div>
+                <div class="service-icon">${tradeIcon(s.icon)}</div>
                 <h3>${s.name}</h3>
                 <p>${s.desc}</p>
             </div>
         `).join('');
 
-        document.getElementById('gallery-grid').innerHTML = trade.gallery.map((g) => `
-            <div class="gallery-tile">
-                <div class="icon">${g.icon}</div>
-                <div class="caption">${g.caption}</div>
+        document.getElementById('trust-grid-cards').innerHTML = trade.trustCards.map((t) => `
+            <div class="service-card">
+                <div class="service-icon">${tradeIcon(t.icon)}</div>
+                <h3>${t.name}</h3>
+                <p>${t.desc}</p>
             </div>
+        `).join('');
+
+        document.getElementById('work-grid').innerHTML = trade.work.map((w) => `
+            <article class="feature-card">
+                <div class="feature-card-photo"><img src="${w.img}" alt="${w.alt}" style="object-position:${w.pos || '50% 50%'}" loading="lazy"></div>
+                <div class="feature-card-caption">
+                    <h3>${w.label}</h3>
+                </div>
+            </article>
         `).join('');
 
         document.getElementById('areas-chips').innerHTML = trade.areas.map((a) => `<span class="area-chip">${a}</span>`).join('');

@@ -43,6 +43,10 @@ const TRADE_ICONS = {
     badge: `<svg viewBox="0 0 24 24" ${TRADE_ICON_STROKE}><circle cx="12" cy="9.5" r="6"/><path d="M9 14.5 L7.5 21.5 L12 19 L16.5 21.5 L15 14.5"/><path d="M9.3 9.5 L11 11.2 L14.8 7.4"/></svg>`,
     person: `<svg viewBox="0 0 24 24" ${TRADE_ICON_STROKE}><circle cx="12" cy="7.5" r="3.5"/><path d="M4.5 20.5 C4.5 15.8 7.8 13 12 13 C16.2 13 19.5 15.8 19.5 20.5"/></svg>`,
     brick: `<svg viewBox="0 0 24 24" ${TRADE_ICON_STROKE}><rect x="3" y="5" width="8" height="6" rx="0.6"/><rect x="13" y="5" width="8" height="6" rx="0.6"/><rect x="3" y="14" width="4" height="6" rx="0.6"/><rect x="9" y="14" width="8" height="6" rx="0.6"/><rect x="19" y="14" width="2" height="6" rx="0.6"/></svg>`,
+    car: `<svg viewBox="0 0 24 24" ${TRADE_ICON_STROKE}><path d="M5 11 L7 6.5 H17 L19 11"/><path d="M2.5 15.5 V12.5 A1.5 1.5 0 0 1 4 11 H20 A1.5 1.5 0 0 1 21.5 12.5 V15.5"/><path d="M2.5 15.5 H21.5"/><circle cx="7" cy="16.8" r="1.7"/><circle cx="17" cy="16.8" r="1.7"/></svg>`,
+    search: `<svg viewBox="0 0 24 24" ${TRADE_ICON_STROKE}><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3 L20.5 20.5"/></svg>`,
+    clipboard: `<svg viewBox="0 0 24 24" ${TRADE_ICON_STROKE}><rect x="5" y="4.5" width="14" height="17" rx="1.5"/><rect x="9" y="3" width="6" height="3" rx="1"/><path d="M8.5 11.5 L10.5 13.5 L15.5 9"/><path d="M8.5 17 H15.5"/></svg>`,
+    smartphone: `<svg viewBox="0 0 24 24" ${TRADE_ICON_STROKE}><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><path d="M10.5 18.5 H13.5"/><path d="M9 6.5 H15" stroke-dasharray="0.1 3.2"/></svg>`,
 };
 
 function tradeIcon(key) {
